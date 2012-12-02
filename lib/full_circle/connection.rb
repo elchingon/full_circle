@@ -11,5 +11,8 @@ module FullCircle
       "http://api.#{domain}/1.0/"
     end
 
+    def call_api_method(method_name, query_params={})
+      HTTParty.get(method_name,base_uri: base_uri, query: query_params) 
+    end
   end
 end
