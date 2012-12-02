@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = FullCircle::VERSION
   gem.authors       = ["Aaron Renner"]
   gem.email         = ["aaron@animascodelabs.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Library for interfacing with the 360Directories API}
+  gem.summary       = %q{Library for interfacing with the 360Directories API}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
