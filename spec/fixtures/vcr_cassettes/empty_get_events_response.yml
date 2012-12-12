@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.360durango.com/1.0/ad.getEvents?adId=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 12 Dec 2012 17:31:39 GMT
+      Server:
+      - Apache/2.2.3 (Red Hat)
+      X-Powered-By:
+      - PHP/5.3.15
+      Set-Cookie:
+      - PHPSESSID=imqd2m14tlvukfbpcr1ejj9fd5; path=/
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      - post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Last-Modified:
+      - Wed, 12 Dec 2012 17:31:39 GMT
+      Content-Length:
+      - '85'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version="1.0"?>
+
+        <ad-getEventsResponse><events></events></ad-getEventsResponse>
+
+'
+    http_version: 
+  recorded_at: Wed, 12 Dec 2012 17:31:42 GMT
+recorded_with: VCR 2.3.0
