@@ -1,4 +1,5 @@
 require 'httparty'
+require "active_support/core_ext"
 
 require 'full_circle/version'
 require 'full_circle/connection'
