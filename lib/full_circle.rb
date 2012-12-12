@@ -1,6 +1,7 @@
 require 'httparty'
 
 require 'full_circle/version'
+require 'full_circle/core_ext'
 require 'full_circle/connection'
 require 'full_circle/response_parser'
 require 'full_circle/api'
