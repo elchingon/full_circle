@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.360durango.com/1.0/ad.getEvents?adId=81213
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 12 Dec 2012 03:35:57 GMT
+      Server:
+      - Apache/2.2.3 (Red Hat)
+      X-Powered-By:
+      - PHP/5.3.15
+      Set-Cookie:
+      - PHPSESSID=u9tqi6ovteo1ttdj3e5orkl5e6; path=/
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      - post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Last-Modified:
+      - Wed, 12 Dec 2012 03:35:57 GMT
+      Content-Length:
+      - '583'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version="1.0"?>
+
+        <ad-getEventsResponse><events><event id="58794" date="2012-12-11" endDate="2012-12-13"
+        time="17:00:00" endTime="19:00:00" title="TWO FOR ONE ENTREES" allDayEvent="0"
+        location="Cyprus Cafe" type="Food Special" dateMode="2" siteId="77" linkText="Click
+        Here to Print Coupon" linkUrl="http://www.360durango.com/coupon/30787" featured="0"
+        description="Present this coupon Monday through Thursday nights between 5p.m.
+        and 7p.m. to receive your second entree FREE." imageURL="http://tours.360durango.com/81213/event_58794.jpg"></event></events></ad-getEventsResponse>
+
+'
+    http_version: 
+  recorded_at: Wed, 12 Dec 2012 03:35:57 GMT
+recorded_with: VCR 2.3.0
