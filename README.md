@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+This library is VERY experimental, so it might be best to let it stablize before using.
 
 ## Contributing
 
