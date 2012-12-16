@@ -1,5 +1,7 @@
 # FullCircle
 
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/aaronrenner/full_circle)
+
 FullCircle is a library for interfacing with the 360Directories API.
 
 ## Installation
