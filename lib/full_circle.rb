@@ -8,6 +8,7 @@ require 'full_circle/api'
 require 'full_circle/event'
 require 'full_circle/event_builder'
 require 'full_circle/coupon'
+require 'full_circle/coupon_builder'
 
 module FullCircle
 

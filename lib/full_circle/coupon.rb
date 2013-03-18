@@ -1,7 +1,7 @@
 module FullCircle
   class Coupon
 
-    ATTRS = [:id, :name, :begin, :expire, :accept_offline, :accept_online, :acceptMobile, :acceptPrint,
+    ATTRS = [:id, :name, :begin, :expire, :accept_offline, :accept_online, :accept_mobile, :accept_print,
       :offer, :restrictions]
     
     attr_reader *ATTRS
