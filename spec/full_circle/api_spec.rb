@@ -3,9 +3,9 @@ require 'vcr'
 
 describe FullCircle::API do
 
-  describe "#fetch_events_for_ad" do
+  let!(:api){FullCircle::API.new(FullCircle::Connection.new("360durango.com"))}
 
-    let!(:api){FullCircle::API.new(FullCircle::Connection.new("360durango.com"))}
+  describe "#fetch_events_for_ad" do
 
     context "with one event" do
       it "returns an array of one event" do
