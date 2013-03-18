@@ -4,6 +4,60 @@ describe FullCircle::ResponseParser do
 
   describe "#parse" do
 
+    context "parsing coupons" do
+      
+      context "with one coupon" do
+        it "returns an array of one coupon" do
+          response_double = double("response")
+          response_double.stub(:parsed_response) do
+            {"ad_getCouponsResponse" => {"coupons" => {"coupon" => 
+              {"id" => "58794", :name => "Early Bird Discount"}
+            }}}
+          end
+
+
+          results = described_class.parse response_double
+          
+          results.should be_a Array
+          results.length.should == 1
+          results.first.should be_a FullCircle::Coupon
+
+
+        end
+      end
+
+      context "with multiple coupons" do
+        it "returns an array of multiple coupons" do
+          response_double = double("response")
+          response_double.stub(:parsed_response) do
+            {"ad_getCouponsResponse" => {"coupons" => {"coupon" =>[ 
+              {"id" => "58794", :name => "TWO FOR ONE ENTREES"},
+              {"id" => "12345", :name => "Three FOR ONE ENTREES"}
+            ]}}}
+          end
+
+          results = described_class.parse response_double
+         
+          results.should be_a Array
+          results.length.should == 2
+          results.first.should be_a FullCircle::Coupon
+        end
+      end
+
+      context "with no coupons" do
+        it "returns an empty array" do
+          response_double = double("response")
+          response_double.stub(:parsed_response) do
+            {"ad_getCouponsResponse" => {"coupons" => nil}}
+          end
+
+          results = described_class.parse response_double
+         
+          results.should eq []
+        end
+      end
+    end
+
     context "parsing events" do
       
       context "with one event" do

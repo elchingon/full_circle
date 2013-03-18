@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.360durango.com/1.0/ad.getCoupons?adId=82196
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 18 Mar 2013 04:30:33 GMT
+      Server:
+      - Apache/2.2.3 (Red Hat)
+      X-Powered-By:
+      - PHP/5.3.15
+      Set-Cookie:
+      - PHPSESSID=20196agcrfo3c8fdt4eahf2s43; path=/
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      - post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Last-Modified:
+      - Mon, 18 Mar 2013 04:30:33 GMT
+      Content-Length:
+      - '1127'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml
+    body:
+      encoding: US-ASCII
+      string: ! '<?xml version="1.0"?>
+
+        <ad-getCouponsResponse><coupons><coupon id="31705" name="Free Hair Cut with
+        an Color Service" begin="2013-03-07" expire="2013-03-31" accept_offline="1"
+        accept_online="0" acceptMobile="1" acceptPrint="1"><offer>Available with Shannon,
+        Lizzie, Jamie, and Tegan only.</offer><restrictions>Valid any Monday, Tuesday,
+        or Wednesday in March. Sweet!</restrictions></coupon><coupon id="31706" name="Deep
+        Blue Muscle Rub Massage" begin="2013-03-07" expire="2013-03-31" accept_offline="1"
+        accept_online="0" acceptMobile="1" acceptPrint="1"><offer>Designed for athletes
+        but excellent for any overworked, tired, sore muscles. $70 for an hour and
+        $45 for high school students.</offer><restrictions>If child is under 18, we
+        require parental consent.</restrictions></coupon><coupon id="31707" name="15%
+        Off Skin Moisturizer" begin="2013-03-07" expire="2013-03-31" accept_offline="1"
+        accept_online="0" acceptMobile="1" acceptPrint="1"><offer>Save on product
+        when you receive any skin treatment.</offer><restrictions>Not valid with any
+        other coupons for products.</restrictions></coupon></coupons></ad-getCouponsResponse>
+
+'
+    http_version: 
+  recorded_at: Mon, 18 Mar 2013 04:30:36 GMT
+recorded_with: VCR 2.4.0

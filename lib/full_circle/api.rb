@@ -12,5 +12,10 @@ module FullCircle
       ResponseParser.parse response
     end
 
+    def fetch_coupons_for_ad(id)
+      response = connection.call_api_method("ad.getCoupons", adId: id)
+      ResponseParser.parse response
+    end
+
   end
 end

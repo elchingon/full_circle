@@ -40,4 +40,39 @@ describe FullCircle::API do
 
   end
 
+
+  describe "#fetch_coupons_for_ad" do
+    
+    context "with one coupon" do
+      it "returns an array of one coupon" do
+        VCR.use_cassette "single_get_coupons_response" do
+          results = api.fetch_coupons_for_ad "123094"
+          results.should be_a Array
+          results.length.should eq 1
+          results.first.should be_a FullCircle::Coupon
+        end
+      end
+    end
+
+    context "with multiple coupons" do
+      it "returns an array of multiple coupons" do
+        VCR.use_cassette "multiple_get_coupons_response" do
+          results = api.fetch_coupons_for_ad "82196"
+          results.should be_a Array
+          results.length.should eq 3
+          results.first.should be_a FullCircle::Coupon
+        end
+      end
+    end
+
+    context "with no coupons" do
+      it "returns an empty array" do
+        VCR.use_cassette "empty_get_coupons_response" do
+          results = api.fetch_coupons_for_ad "1"
+          results.should eq []
+        end
+      end
+    end
+  end
+
 end
