@@ -24,5 +24,11 @@ module FullCircle
       response = connection.call_api_method("city.getEventAreas")
       parser.parse response
     end
+
+    def fetch_upcoming_events
+      parser = ResponseParser.new "city.getUpcomingEvents", "event"
+      response = connection.call_api_method("city.getUpcomingEvents")
+      parser.parse response
+    end
   end
 end
