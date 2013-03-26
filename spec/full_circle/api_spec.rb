@@ -115,7 +115,7 @@ describe FullCircle::API do
     context "with one event" do
       it "returns an array of one event" do
         VCR.use_cassette "single_get_upcoming_events_response" do
-          results = api.fetch_upcoming_events
+          results = api.fetch_upcoming_events areaId: "592"
           results.should be_a Array
           results.length.should be 1
           results.first.should be_a FullCircle::Event

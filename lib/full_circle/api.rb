@@ -19,15 +19,15 @@ module FullCircle
       parser.parse response
     end
 
-    def fetch_event_areas
+    def fetch_event_areas()
       parser = ResponseParser.new "city.getEventAreas", "eventArea"
       response = connection.call_api_method("city.getEventAreas")
       parser.parse response
     end
 
-    def fetch_upcoming_events
+    def fetch_upcoming_events(params={})
       parser = ResponseParser.new "city.getUpcomingEvents", "event"
-      response = connection.call_api_method("city.getUpcomingEvents")
+      response = connection.call_api_method("city.getUpcomingEvents", params)
       parser.parse response
     end
   end

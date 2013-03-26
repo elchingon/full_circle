@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.360durango.com/1.0/city.getUpcomingEvents?
+    uri: http://api.360durango.com/1.0/city.getUpcomingEvents?areaId=592
     body:
       encoding: US-ASCII
       string: ''
@@ -13,13 +13,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 26 Mar 2013 22:33:02 GMT
+      - Tue, 26 Mar 2013 23:05:54 GMT
       Server:
       - Apache/2.2.3 (Red Hat)
       X-Powered-By:
       - PHP/5.3.15
       Set-Cookie:
-      - PHPSESSID=2ij8e57oaejb24vg5pbpnpdn72; path=/
+      - PHPSESSID=160julahei3dh4nah83t2g0h11; path=/
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Cache-Control:
@@ -28,29 +28,34 @@ http_interactions:
       Pragma:
       - no-cache
       Last-Modified:
-      - Tue, 26 Mar 2013 22:33:02 GMT
+      - Tue, 26 Mar 2013 23:05:54 GMT
+      Content-Length:
+      - '1304'
       Connection:
       - close
-      Transfer-Encoding:
-      - chunked
       Content-Type:
       - text/xml
     body:
       encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\"?>\n<city-getUpcomingEventsResponse page=\"1\"
-        resultsPerPage=\"20\" totalPages=\"8\" totalResults=\"149\"><events><event
-        id=\"36342\" date=\"2013-03-26\" expireDate=\"2013-04-02\" time=\"00:00:00\"
-        title=\"$5 Burger or Sandwich\" allDayEvent=\"1\" location=\"The Irish Embassy
-        Pub\" type=\"Food Special\" dateMode=\"4\" siteId=\"77\" price=\"$5\" linkText=\"The
-        Irish Embassy Pub\" linkUrl=\"http://www.theirishembassypub.com\" featured=\"0\">$5
-        Burger, Nackers Chicken Sandwich, or Fish Sandwich<ad id=\"89690\" name=\"The
-        Irish Embassy Pub\" url=\"http://360Durango.com/Attractions/TheIrishEmbassyPub.html\"
-        description=\"The Irish Embassy is Durango's downtown Pub, perfect for a nice
-        cold beer, live music and traditional Irish Fayre\" eventCount=\"8\" couponCount=\"0\"
-        jobCount=\"0\" locationCount=\"1\" popupCount=\"5\" slideshowCount=\"4\" linkCount=\"5\"><address
-        addr1=\"900 Main Ave.\" city=\"Durango\" state=\"CO\" zipCode=\"81301\" phone=\"970.403.1200\"
-        fax=\"970.403.1203\"></address><logoImage url=\"http://tours.360durango.com/89690/logo.gif\"
-        width=\"153\" height=\"175\"></logoImage></ad></event></events></city-getUpcomingEventsResponse>\n"
+      string: ! '<?xml version="1.0"?>
+
+        <city-getUpcomingEventsResponse page="1" resultsPerPage="20" totalPages="1"
+        totalResults="1"><events><event id="55504" date="2013-04-17" expireDate="2013-12-04"
+        time="18:30:00" title="Wednesday Night Group Runs" allDayEvent="0" location="Meet
+        at Backcountry Experience" type="Sports" dateMode="4" siteId="77" price="Free!"
+        featured="0">Join us for fun group runs on roads and trails every Wednesday
+        night! This is a social, no-drop run for all levels! Meet at BCEXP for a 6:30
+        pm departure. We''ll run where the group wants, for how long the group wants
+        and then go out for discounted drinks and food at Cosmo Durango or Carver
+        Brewing Company!<ad id="82669" name="Backcountry Experience" url="http://360Durango.com/Attractions/BackcountryExperience.html"
+        description="Durango''s favorite outdoor shop and outfitter. Featuring unique
+        brands, demo/rental equipment and premium customer care." eventCount="1" couponCount="0"
+        jobCount="0" locationCount="2" popupCount="1" slideshowCount="2" linkCount="4"><address
+        addr1="1205 Camino Del Rio" city="Durango" state="CO" zipCode="81301" phone="970.247.5830"
+        fax="970.247.8013"></address><logoImage url="http://tours.360durango.com/82669/logo.gif"
+        width="250" height="218"></logoImage></ad></event></events></city-getUpcomingEventsResponse>
+
+'
     http_version: 
-  recorded_at: Tue, 26 Mar 2013 22:33:04 GMT
+  recorded_at: Tue, 26 Mar 2013 23:05:54 GMT
 recorded_with: VCR 2.4.0
