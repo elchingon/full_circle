@@ -1,6 +1,7 @@
 module FullCircle
   class ResponseParser
 
+    # TODO: Refactor this into an instance method
     def self.parse(response)
       attrs = response.parsed_response
 
@@ -9,40 +10,30 @@ module FullCircle
       # to search deeply in nested hashes: https://gist.github.com/58257
       
       if attrs.has_key? "ad_getEventsResponse"
-        if attrs["ad_getEventsResponse"]["events"].nil?
-          []
-        else
-          event_attrs = Array.wrap(attrs["ad_getEventsResponse"]["events"]["event"])
-
-          builder = ObjectBuilder.new(Event)
-          event_attrs.collect do |event_attr_set|
-            builder.from_api_hash(event_attr_set)
-          end
-        end
+        self.parse_response(attrs, "ad_getEventsResponse", "event")
       elsif attrs.has_key? "ad_getCouponsResponse"
-        if attrs["ad_getCouponsResponse"]["coupons"].nil?
-          []
-        else
-          coupon_attrs = Array.wrap(attrs["ad_getCouponsResponse"]["coupons"]["coupon"])
-
-          builder = ObjectBuilder.new(Coupon)
-          coupon_attrs.collect do |coupon_attr_set|
-            builder.from_api_hash(coupon_attr_set)
-          end
-        end
+        self.parse_response(attrs, "ad_getCouponsResponse", "coupon")
       elsif attrs.has_key? "city_getEventAreasResponse"
-        if attrs["city_getEventAreasResponse"]["eventAreas"].nil?
-          []
-        else
-          event_area_attrs = Array.wrap(attrs["city_getEventAreasResponse"]["eventAreas"]["eventArea"])
-
-          builder = ObjectBuilder.new(EventArea)
-          event_area_attrs.collect do |event_area_attr_set|
-            builder.from_api_hash(event_area_attr_set)
-          end
-        end
+        self.parse_response(attrs, "city_getEventAreasResponse", "eventArea")
       end
     end
 
+
+    private
+
+    # example
+    # parseResponse(attrs, "city_getEventAreasResponse", "eventArea")
+    def self.parse_response(attrs, response_name, object_name)
+      if attrs[response_name][object_name.pluralize].nil?
+        []
+      else
+        response_attrs = Array.wrap(attrs[response_name][object_name.pluralize][object_name])
+
+        builder = ObjectBuilder.new("FullCircle::#{object_name.camelize}".constantize)
+        response_attrs.collect do |response_attr_set|
+          builder.from_api_hash(response_attr_set)
+        end
+      end
+    end
   end
 end
