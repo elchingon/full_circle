@@ -1,8 +1,10 @@
 module FullCircle
   class ResponseParser
 
-    # TODO: Refactor this into an instance method
-    def self.parse(response)
+    def initialize
+    end
+
+    def parse(response)
       attrs = response.parsed_response
 
       # TODO this could be much better. Maybe have individual parsers that are called
@@ -10,11 +12,11 @@ module FullCircle
       # to search deeply in nested hashes: https://gist.github.com/58257
       
       if attrs.has_key? "ad_getEventsResponse"
-        self.parse_response(attrs, "ad_getEventsResponse", "event")
+        parse_response(attrs, "ad_getEventsResponse", "event")
       elsif attrs.has_key? "ad_getCouponsResponse"
-        self.parse_response(attrs, "ad_getCouponsResponse", "coupon")
+        parse_response(attrs, "ad_getCouponsResponse", "coupon")
       elsif attrs.has_key? "city_getEventAreasResponse"
-        self.parse_response(attrs, "city_getEventAreasResponse", "eventArea")
+        parse_response(attrs, "city_getEventAreasResponse", "eventArea")
       end
     end
 
@@ -23,7 +25,7 @@ module FullCircle
 
     # example
     # parseResponse(attrs, "city_getEventAreasResponse", "eventArea")
-    def self.parse_response(attrs, response_name, object_name)
+    def parse_response(attrs, response_name, object_name)
       if attrs[response_name][object_name.pluralize].nil?
         []
       else

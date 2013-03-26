@@ -4,7 +4,10 @@ describe FullCircle::ResponseParser do
 
   describe "#parse" do
 
+    let(:parser) { described_class.new}
+    
     context "parsing coupons" do
+
       
       context "with one coupon" do
         it "returns an array of one coupon" do
@@ -16,7 +19,7 @@ describe FullCircle::ResponseParser do
           end
 
 
-          results = described_class.parse response_double
+          results = parser.parse response_double
           
           results.should be_a Array
           results.length.should == 1
@@ -36,7 +39,7 @@ describe FullCircle::ResponseParser do
             ]}}}
           end
 
-          results = described_class.parse response_double
+          results = parser.parse response_double
          
           results.should be_a Array
           results.length.should == 2
@@ -51,7 +54,7 @@ describe FullCircle::ResponseParser do
             {"ad_getCouponsResponse" => {"coupons" => nil}}
           end
 
-          results = described_class.parse response_double
+          results = parser.parse response_double
          
           results.should eq []
         end
@@ -71,7 +74,7 @@ describe FullCircle::ResponseParser do
           end
 
 
-          results = described_class.parse response_double
+          results = parser.parse response_double
           
           results.should be_a Array
           results.length.should == 1
@@ -93,7 +96,7 @@ describe FullCircle::ResponseParser do
             ]}}}
           end
 
-          results = described_class.parse response_double
+          results = parser.parse response_double
          
           results.should be_a Array
           results.length.should == 2
@@ -110,7 +113,7 @@ describe FullCircle::ResponseParser do
             {"ad_getEventsResponse" => {"events" => nil}}
           end
 
-          results = described_class.parse response_double
+          results = parser.parse response_double
          
           results.should eq []
         end
@@ -131,7 +134,7 @@ describe FullCircle::ResponseParser do
           end
 
 
-          results = described_class.parse response_double
+          results = parser.parse response_double
           
           results.should be_a Array
           results.length.should == 1
@@ -153,7 +156,7 @@ describe FullCircle::ResponseParser do
             ]}}}
           end
 
-          results = described_class.parse response_double
+          results = parser.parse response_double
          
           results.should be_a Array
           results.length.should == 2
@@ -170,7 +173,7 @@ describe FullCircle::ResponseParser do
             {"city_getEventAreasResponse" => {"eventAreas" => nil}}
           end
 
-          results = described_class.parse response_double
+          results = parser.parse response_double
          
           results.should eq []
         end

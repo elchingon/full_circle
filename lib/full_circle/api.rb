@@ -8,18 +8,21 @@ module FullCircle
     end
 
     def fetch_events_for_ad(id)
+      parser = ResponseParser.new 
       response = connection.call_api_method("ad.getEvents", adId: id)
-      ResponseParser.parse response
+      parser.parse response
     end
 
     def fetch_coupons_for_ad(id)
+      parser = ResponseParser.new 
       response = connection.call_api_method("ad.getCoupons", adId: id)
-      ResponseParser.parse response
+      parser.parse response
     end
 
     def fetch_event_areas
+      parser = ResponseParser.new 
       response = connection.call_api_method("city.getEventAreas")
-      ResponseParser.parse response
+      parser.parse response
     end
   end
 end
