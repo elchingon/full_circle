@@ -14,8 +14,9 @@ module FullCircle
         else
           event_attrs = Array.wrap(attrs["ad_getEventsResponse"]["events"]["event"])
 
+          builder = ObjectBuilder.new(Event)
           event_attrs.collect do |event_attr_set|
-            EventBuilder.from_api_hash(event_attr_set)
+            builder.from_api_hash(event_attr_set)
           end
         end
       elsif attrs.has_key? "ad_getCouponsResponse"
@@ -24,8 +25,9 @@ module FullCircle
         else
           coupon_attrs = Array.wrap(attrs["ad_getCouponsResponse"]["coupons"]["coupon"])
 
+          builder = ObjectBuilder.new(Coupon)
           coupon_attrs.collect do |coupon_attr_set|
-            CouponBuilder.from_api_hash(coupon_attr_set)
+            builder.from_api_hash(coupon_attr_set)
           end
         end
       elsif attrs.has_key? "city_getEventAreasResponse"
@@ -34,8 +36,9 @@ module FullCircle
         else
           event_area_attrs = Array.wrap(attrs["city_getEventAreasResponse"]["eventAreas"]["eventArea"])
 
+          builder = ObjectBuilder.new(EventArea)
           event_area_attrs.collect do |event_area_attr_set|
-            EventAreaBuilder.from_api_hash(event_area_attr_set)
+            builder.from_api_hash(event_area_attr_set)
           end
         end
       end
