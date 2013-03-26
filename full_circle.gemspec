@@ -10,7 +10,8 @@ Gem::Specification.new do |gem|
   gem.email         = ["aaron@animascodelabs.com"]
   gem.description   = %q{Library for interfacing with the 360Directories API}
   gem.summary       = %q{Library for interfacing with the 360Directories API}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/aaronrenner/full_circle"
+  gem.required_ruby_version = ">= 1.9.2"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

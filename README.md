@@ -4,6 +4,10 @@
 
 FullCircle is a library for interfacing with the 360Directories API.
 
+## Requirements
+
+Ruby >= 1.9.2
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -21,6 +25,15 @@ Or install it yourself as:
 ## Usage
 
 This library is VERY experimental, so it might be best to let it stablize before using.
+
+### Running from irb
+
+You can load this library up in irb with the following commands
+
+    $ cd <gem dir>
+    $ irb
+    irb (main):001:0> require "./lib/full_circle"
+
 
 ## Contributing
 
