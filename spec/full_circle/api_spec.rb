@@ -75,4 +75,39 @@ describe FullCircle::API do
     end
   end
 
+  describe "#fetch_event_areas" do
+    context "with one event area" do
+      it "returns an array of one event area" do
+        VCR.use_cassette "single_event_areas_response" do
+          results = api.fetch_event_areas
+          results.should be_a Array
+          results.length.should eq 1
+          results.first.should be_a FullCircle::EventArea
+        end
+      end
+    end
+
+    context "with multiple event areas" do
+      it "returns an array of multiple event areas" do
+        VCR.use_cassette "multiple_event_areas_response" do
+          results = api.fetch_event_areas
+          results.should be_a Array
+          results.length.should eq 7
+          results.first.should be_a FullCircle::EventArea
+        end
+      end
+    end
+
+    context "with no event areas" do
+      let!(:api){FullCircle::API.new(FullCircle::Connection.new("1019thewave.com"))}
+      it "returns an empty array" do
+        VCR.use_cassette "empty_event_area_response" do
+          results = api.fetch_event_areas
+          results.should eq []
+        end
+      end
+    end
+
+  end
+
 end

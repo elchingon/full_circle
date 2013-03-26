@@ -1,9 +1,9 @@
 module FullCircle
-  class EventAreaBuilder
+  class EventBuilder
 
     def self.from_api_hash(hash)
 
-      EventArea.new underscore_hash_keys(hash)
+      Event.new underscore_hash_keys(hash)
     end
 
 

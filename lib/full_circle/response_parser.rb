@@ -28,6 +28,16 @@ module FullCircle
             CouponBuilder.from_api_hash(coupon_attr_set)
           end
         end
+      elsif attrs.has_key? "city_getEventAreasResponse"
+        if attrs["city_getEventAreasResponse"]["eventAreas"].nil?
+          []
+        else
+          event_area_attrs = Array.wrap(attrs["city_getEventAreasResponse"]["eventAreas"]["eventArea"])
+
+          event_area_attrs.collect do |event_area_attr_set|
+            EventAreaBuilder.from_api_hash(event_area_attr_set)
+          end
+        end
       end
     end
 

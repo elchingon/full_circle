@@ -118,6 +118,66 @@ describe FullCircle::ResponseParser do
 
     end 
 
+    context "parsing event areas" do
+      
+      context "with one event areas" do
+
+        it "returns an array of one event area" do
+          response_double = double("response")
+          response_double.stub(:parsed_response) do
+            {"city_getEventAreasResponse" => {"eventAreas" => {"eventArea" => 
+              {"id" => "736", :title => "Bayfield"}
+            }}}
+          end
+
+
+          results = described_class.parse response_double
+          
+          results.should be_a Array
+          results.length.should == 1
+          results.first.should be_a FullCircle::EventArea
+
+
+        end
+
+      end
+
+      context "with multiple event areas" do
+
+        it "returns an array of multiple event areas" do
+          response_double = double("response")
+          response_double.stub(:parsed_response) do
+            {"city_getEventAreasResponse" => {"eventAreas" => {"eventArea" =>[ 
+              {"id" => "58794", :title => "Bayfield"},
+              {"id" => "12345", :title => "Vallecito"}
+            ]}}}
+          end
+
+          results = described_class.parse response_double
+         
+          results.should be_a Array
+          results.length.should == 2
+          results.first.should be_a FullCircle::EventArea
+        end
+
+      end
+
+      context "with no event areas" do
+        it "returns an emtpy array" do
+          
+          response_double = double("response")
+          response_double.stub(:parsed_response) do
+            {"city_getEventAreasResponse" => {"eventAreas" => nil}}
+          end
+
+          results = described_class.parse response_double
+         
+          results.should eq []
+        end
+      end
+
+    end 
+
   end
 
 end
