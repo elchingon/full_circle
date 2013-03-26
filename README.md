@@ -1,8 +1,9 @@
 # FullCircle
 
 [![Code Climate](https://codeclimate.com/github/aaronrenner/full_circle.png)](https://codeclimate.com/github/aaronrenner/full_circle)
+[![Dependency Status](https://gemnasium.com/aaronrenner/full_circle.png)](https://gemnasium.com/aaronrenner/full_circle)
 
-FullCircle is a library for interfacing with the 360Directories API.
+FullCircle/ i library for interfacing with the 360Directories API.
 
 ## Requirements
 
