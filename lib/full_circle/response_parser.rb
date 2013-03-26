@@ -1,24 +1,20 @@
 module FullCircle
   class ResponseParser
 
-    def initialize
+    attr_reader :api_method_name, :object_name
+
+    def initialize(api_method_name, object_name)
+      @api_method_name= api_method_name
+      @object_name = object_name
     end
 
     def parse(response)
       attrs = response.parsed_response
 
-      # TODO this could be much better. Maybe have individual parsers that are called
-      # based on a specific key like "events". This is a good gist for an idea of how
-      # to search deeply in nested hashes: https://gist.github.com/58257
-      
-      if attrs.has_key? "ad_getEventsResponse"
-        parse_response(attrs, "ad_getEventsResponse", "event")
-      elsif attrs.has_key? "ad_getCouponsResponse"
-        parse_response(attrs, "ad_getCouponsResponse", "coupon")
-      elsif attrs.has_key? "city_getEventAreasResponse"
-        parse_response(attrs, "city_getEventAreasResponse", "eventArea")
-      end
+      parse_response(attrs, response_name, object_name)
     end
+
+
 
 
     private
@@ -37,5 +33,10 @@ module FullCircle
         end
       end
     end
+    
+    def response_name
+      @response_name ||= "#{api_method_name.gsub(/\./,'_')}Response"
+    end
+
   end
 end

@@ -4,10 +4,10 @@ describe FullCircle::ResponseParser do
 
   describe "#parse" do
 
-    let(:parser) { described_class.new}
     
     context "parsing coupons" do
 
+      let(:parser) {described_class.new "ad.getCoupons","coupon"}
       
       context "with one coupon" do
         it "returns an array of one coupon" do
@@ -62,6 +62,8 @@ describe FullCircle::ResponseParser do
     end
 
     context "parsing events" do
+      
+      let(:parser) {described_class.new "ad.getEvents","event"}
       
       context "with one event" do
 
@@ -122,6 +124,8 @@ describe FullCircle::ResponseParser do
     end 
 
     context "parsing event areas" do
+      
+      let(:parser) {described_class.new "city.getEventAreas","eventArea"}
       
       context "with one event areas" do
 
