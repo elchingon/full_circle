@@ -3,7 +3,7 @@ require "spec_helper"
 describe FullCircle::ObjectBuilder do
 
   describe "#from_api_hash" do
-    let(:builder) { described_class.new(FullCircle::Event)}
+    let(:builder) { described_class.new}
 
     it "builds a new event with the appropriate attribute set" do
       object = builder.from_api_hash("id" => "123", "title" => "Hello World")

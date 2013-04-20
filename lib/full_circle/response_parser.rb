@@ -9,9 +9,11 @@ module FullCircle
     end
 
     def parse(response)
-      attrs = response.parsed_response
+      if response
+        attrs = response.parsed_response
 
-      parse_response(attrs, response_name, object_name)
+        parse_response(attrs, response_name, object_name)
+      end
     end
 
 
@@ -27,7 +29,7 @@ module FullCircle
       else
         response_attrs = Array.wrap(attrs[response_name][object_name.pluralize][object_name])
 
-        builder = ObjectBuilder.new("FullCircle::#{object_name.camelize}".constantize)
+        builder = ObjectBuilder.new
         response_attrs.collect do |response_attr_set|
           builder.from_api_hash(response_attr_set)
         end

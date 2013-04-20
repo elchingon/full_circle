@@ -1,3 +1,5 @@
+require 'ostruct'
+
 module FullCircle
   class ObjectBuilder
 
@@ -6,7 +8,7 @@ module FullCircle
     #
     #   cls - Class responding to initialize(hash) that takes a hash and sets
     #       its instance variables
-    def initialize(cls)
+    def initialize(cls=OpenStruct)
       @cls = cls
     end
 

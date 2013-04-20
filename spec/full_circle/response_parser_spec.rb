@@ -23,8 +23,11 @@ describe FullCircle::ResponseParser do
           
           results.should be_a Array
           results.length.should == 1
-          results.first.should be_a FullCircle::Coupon
+          coupon = results.first
+          coupon.id.should eq "58794"
+          coupon.name.should eq "Early Bird Discount"
 
+          #TODO Test command message is sent to object builder
 
         end
       end
@@ -43,7 +46,6 @@ describe FullCircle::ResponseParser do
          
           results.should be_a Array
           results.length.should == 2
-          results.first.should be_a FullCircle::Coupon
         end
       end
 
@@ -80,8 +82,6 @@ describe FullCircle::ResponseParser do
           
           results.should be_a Array
           results.length.should == 1
-          results.first.should be_a FullCircle::Event
-
 
         end
 
@@ -102,7 +102,6 @@ describe FullCircle::ResponseParser do
          
           results.should be_a Array
           results.length.should == 2
-          results.first.should be_a FullCircle::Event
         end
 
       end
@@ -142,7 +141,6 @@ describe FullCircle::ResponseParser do
           
           results.should be_a Array
           results.length.should == 1
-          results.first.should be_a FullCircle::EventArea
 
 
         end
@@ -164,7 +162,6 @@ describe FullCircle::ResponseParser do
          
           results.should be_a Array
           results.length.should == 2
-          results.first.should be_a FullCircle::EventArea
         end
 
       end

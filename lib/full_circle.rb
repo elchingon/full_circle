@@ -6,9 +6,6 @@ require_relative 'full_circle/connection'
 require_relative 'full_circle/object_builder'
 require_relative 'full_circle/response_parser'
 require_relative 'full_circle/api'
-require_relative 'full_circle/event_area'
-require_relative 'full_circle/event'
-require_relative 'full_circle/coupon'
 
 module FullCircle
 
