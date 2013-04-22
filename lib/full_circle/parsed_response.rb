@@ -14,12 +14,29 @@ module FullCircle
       @metadata ||= build_metadata
     end
 
+    def results
+      collection_array
+    end
+
     
     private
 
     def response_hash
       @response_hash ||= parsed_xml.fetch(parsed_xml.keys.first)
     end
+
+    def collection_array
+      if @collection_array.nil?
+        result = collection_wrapper_hash.fetch(sub_enumerable_key_names(collection_wrapper_hash).first){[]}
+        @collection_array = Array.wrap(result);
+      end
+      @collection_array
+    end
+
+    def collection_wrapper_hash
+      @wrapped_collection ||= response_hash.fetch(sub_enumerable_key_names(response_hash).first){{}}
+    end
+
 
     def parsed_xml
       @parsed_xml ||= MultiXml.parse(raw_xml)
@@ -32,6 +49,10 @@ module FullCircle
         total_results: Integer(response_hash.fetch("totalResults"){1}),
         results_per_page: Integer(response_hash.fetch("resultsPerPage"){1})
       })
+    end
+
+    def sub_enumerable_key_names(hash)
+      hash.map {|k,v| k if v.kind_of? Enumerable }.reject{|k| k.nil?}
     end
   end
 end
