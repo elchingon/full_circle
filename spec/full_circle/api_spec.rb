@@ -19,6 +19,12 @@ describe FullCircle::API do
       described_class.new(mock_connection).fetch_events_for_ad("1")
     end
 
+    describe "event object" do
+      use_vcr_cassette "single_get_events_response"
+      subject {api.fetch_events_for_ad("81213").first}
+      it_behaves_like "an event"
+    end
+
     context "with one event" do
       it "returns an array of one event" do
         VCR.use_cassette "single_get_events_response" do
@@ -138,6 +144,13 @@ describe FullCircle::API do
       mock_connection.should_receive(:call_api_method).with("city.getUpcomingEvents",{})
 
       described_class.new(mock_connection).fetch_upcoming_events
+    end
+
+    describe "event object" do
+      use_vcr_cassette "single_get_upcoming_events_response"
+
+      subject {api.fetch_upcoming_events(areaId:"592").first}
+      it_behaves_like "an event"
     end
 
     context "with one event" do
