@@ -26,10 +26,10 @@ EOS
 
       subject { described_class.new(xml).metadata }
 
-      its(:page){should eq 2}
-      its(:results_per_page){should eq 2}
-      its(:total_pages){should eq 541 }
-      its(:total_results){should eq 1081}
+      its([:page]){should eq 2}
+      its([:results_per_page]){should eq 2}
+      its([ :total_pages ]){should eq 541 }
+      its([ :total_results ]){should eq 1081}
 
 
 
@@ -58,10 +58,10 @@ EOS
 
       subject { described_class.new(xml).metadata }
 
-      its(:page){should eq 1}
-      its(:total_pages){should eq 1 }
-      its(:total_results) {should eq 2}
-      its(:results_per_page) {should eq 2 }
+      its([ :page ]){should eq 1}
+      its([ :total_pages ]){should eq 1 }
+      its([ :total_results ]) {should eq 2}
+      its([ :results_per_page ]) {should eq 2 }
 
     end
   end
