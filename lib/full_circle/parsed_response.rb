@@ -46,8 +46,8 @@ module FullCircle
       OpenStruct.new( {
         page: Integer(response_hash.fetch("page"){1}),
         total_pages: Integer(response_hash.fetch("totalPages"){1}),
-        total_results: Integer(response_hash.fetch("totalResults"){1}),
-        results_per_page: Integer(response_hash.fetch("resultsPerPage"){1})
+        total_results: Integer(response_hash.fetch("totalResults"){results.length}),
+        results_per_page: Integer(response_hash.fetch("resultsPerPage"){results.length})
       })
     end
 

@@ -46,6 +46,11 @@ EOS
               <offer>Get a relaxing and restorative 90 minute massage for just $90!</offer>
               <restrictions>Service must be booked in the month of April.</restrictions>
             </coupon>
+            <coupon id="32025" name="90 for 90!" begin="2013-04-04" 
+               expire="2013-04-30" accept_offline="1" accept_online="0" acceptMobile="1" acceptPrint="1">
+              <offer>Get a relaxing and restorative 90 minute massage for just $90!</offer>
+              <restrictions>Service must be booked in the month of April.</restrictions>
+            </coupon>
           </coupons>
         </ad-getCouponsResponse>
 EOS
@@ -55,8 +60,8 @@ EOS
 
       its(:page){should eq 1}
       its(:total_pages){should eq 1 }
-      its(:total_results) {should eq 1}
-      its(:results_per_page) {should eq 1 }
+      its(:total_results) {should eq 2}
+      its(:results_per_page) {should eq 2 }
 
     end
   end
