@@ -22,6 +22,7 @@ module FullCircle
         end_date: hash["endDate"],
         expire_date: hash["expireDate"],
         end_time: hash["endTime"],
+        description: hash["__content__"],
       })
     end
 
