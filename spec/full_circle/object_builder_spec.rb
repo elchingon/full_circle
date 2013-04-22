@@ -1,6 +1,11 @@
 require "spec_helper"
 
+shared_examples_for "an object builder" do
+  it {should respond_to :from_api_hash}
+end
+
 describe FullCircle::ObjectBuilder do
+  it_behaves_like "an object builder"
 
   describe "#from_api_hash" do
     let(:builder) { described_class.new}
