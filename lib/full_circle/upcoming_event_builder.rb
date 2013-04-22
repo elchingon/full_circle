@@ -23,6 +23,7 @@ module FullCircle
         expire_date: hash["expireDate"],
         end_time: hash["endTime"],
         description: hash["__content__"],
+        ad_id: ad_id,
       })
     end
 
@@ -36,7 +37,7 @@ module FullCircle
     end
 
     def ad_id
-      hash.fetch("ad"){{}}.fetch("id"){""}
+      hash.fetch("ad"){{}}["id"]
     end
       
   end
