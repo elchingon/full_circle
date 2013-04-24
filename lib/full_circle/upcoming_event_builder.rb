@@ -16,9 +16,9 @@ module FullCircle
         all_day_event: hash.fetch("allDayEvent"),
         date_mode: hash.fetch("dateMode"),
         site_id: hash.fetch("siteId"),
-        image_url: "http://tours.#{domain}/#{ad_id}/event_#{event_id}.jpg",
         type: hash.fetch("type"),
 
+        image_url: hash.fetch("ad"){{}}.fetch("logoImage"){{}}["url"],
         end_date: hash["endDate"],
         expire_date: hash["expireDate"],
         end_time: hash["endTime"],
