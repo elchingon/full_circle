@@ -17,11 +17,12 @@ module FullCircle
     end
 
     def call_api_method(method_name, query_params={})
-      uri = URI(uri_string(method_name, query_params))
+      uri_str = uri_string(method_name, query_params)
+      uri = URI(uri_str)
 
-      body = cache.fetch(uri) do
+      body = cache.fetch(uri_str) do
         response_text = Net::HTTP.get(uri)
-        cache.store(uri, response_text)
+        cache.store(uri_str, response_text)
       end
 
       Response.new body
