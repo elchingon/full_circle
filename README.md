@@ -35,12 +35,6 @@ You can load this library up in irb with the following commands
     $ irb
     irb (main):001:0> require "./lib/full_circle"
 
-### Installing redis dependency
-
-    sudo apt-add-repository ppa:chris-lea/redis-server
-    sudo apt-get update
-    sudo apt-get install redis-server
-
 
 ## Contributing
 
