@@ -12,7 +12,12 @@ module FullCircle
     end
 
     def call_api_method(method_name, query_params={})
-      HTTParty.get(method_name,base_uri: base_uri, query: query_params) 
+      uri = URI("#{base_uri}#{method_name}?#{query_params.to_query}")
+      response_text = Net::HTTP.get(uri)
+      Response.new response_text
     end
+
+    private
+    Response = Struct.new(:body)
   end
 end

@@ -1,5 +1,4 @@
 require 'multi_xml'
-require 'httparty'
 require "active_support/core_ext"
 
 require_relative 'full_circle/version'
