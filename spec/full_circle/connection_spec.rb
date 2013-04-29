@@ -46,5 +46,10 @@ describe FullCircle::Connection do
 
   end
 
+  describe FullCircle::Connection::NullCache do
+    subject {FullCircle::Connection::NullCache.new}
+    it_behaves_like "a cacher"
+  end
+
 
 end

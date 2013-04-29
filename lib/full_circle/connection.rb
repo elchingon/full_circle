@@ -28,9 +28,6 @@ module FullCircle
 
     end
 
-    private
-    Response = Struct.new(:body)
-
     NullCache = Class.new do
       def fetch(key)
         yield
@@ -40,6 +37,10 @@ module FullCircle
         value
       end
     end
+
+    private
+    Response = Struct.new(:body)
+
 
     def uri_string(method_name, query_params)
       "#{base_uri}#{method_name}?#{query_params.to_query}"
