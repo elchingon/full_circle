@@ -22,7 +22,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency "activesupport", "~>3.2.12"
   gem.add_development_dependency "rspec"
   gem.add_development_dependency "vcr"
-  gem.add_development_dependency "webmock", "~> 1.8.0"
+  gem.add_development_dependency "webmock", ">= 1.8.0", "< 1.10.0"
   gem.add_development_dependency "rake"
   gem.add_development_dependency "guard-rspec"
   gem.add_development_dependency "rb-inotify", "~> 0.9"

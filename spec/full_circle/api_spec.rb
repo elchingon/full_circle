@@ -19,8 +19,7 @@ describe FullCircle::API do
       described_class.new(mock_connection).fetch_events_for_ad("1")
     end
 
-    describe "event object" do
-      use_vcr_cassette "single_get_events_response"
+    describe "event object", :vcr => {cassette_name: "single_get_events_response"} do
       subject {api.fetch_events_for_ad("81213").first}
       it_behaves_like "an event"
     end
@@ -146,8 +145,7 @@ describe FullCircle::API do
       described_class.new(mock_connection).fetch_upcoming_events
     end
 
-    describe "event object" do
-      use_vcr_cassette "single_get_upcoming_events_response"
+    describe "event object", vcr: {cassette_name: "single_get_upcoming_events_response"} do
 
       subject {api.fetch_upcoming_events(areaId:"592").first}
       it_behaves_like "an event"
