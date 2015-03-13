@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.360durango.com/1.0/city.getEventAreas?
+    uri: http://api.360durango.com/1.0/city.getEventAreas
     body:
       encoding: US-ASCII
       string: ''
@@ -46,6 +46,6 @@ http_interactions:
         id="591" name="Historic Downtown"></eventArea><eventArea id="735" name="Vallecito"></eventArea></eventAreas></city-getEventAreasResponse>
 
 '
-    http_version: 
+    http_version:
   recorded_at: Tue, 26 Mar 2013 19:19:20 GMT
 recorded_with: VCR 2.4.0

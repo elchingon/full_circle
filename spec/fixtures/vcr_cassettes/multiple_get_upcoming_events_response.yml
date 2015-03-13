@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.360durango.com/1.0/city.getUpcomingEvents?
+    uri: http://api.360durango.com/1.0/city.getUpcomingEvents
     body:
       encoding: US-ASCII
       string: ''
@@ -272,6 +272,6 @@ http_interactions:
         addr1=\"1911 Main Ave., Suite 100\" city=\"Durango\" state=\"CO\" zipCode=\"81301\"
         phone=\"970.247.1240\" fax=\"970.247.1771\"></address><logoImage url=\"http://tours.360durango.com/152054/logo.gif\"
         width=\"300\" height=\"263\"></logoImage></ad></event></events></city-getUpcomingEventsResponse>\n"
-    http_version: 
+    http_version:
   recorded_at: Tue, 26 Mar 2013 22:30:11 GMT
 recorded_with: VCR 2.4.0

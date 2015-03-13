@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.1019thewave.com/1.0/city.getEventAreas?
+    uri: http://api.1019thewave.com/1.0/city.getEventAreas
     body:
       encoding: US-ASCII
       string: ''
@@ -42,6 +42,6 @@ http_interactions:
         <city-getEventAreasResponse page="1" resultsPerPage="20" totalPages="0" totalResults="0"><eventAreas></eventAreas></city-getEventAreasResponse>
 
 '
-    http_version: 
+    http_version:
   recorded_at: Tue, 26 Mar 2013 19:29:44 GMT
 recorded_with: VCR 2.4.0
