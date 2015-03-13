@@ -1,9 +1,9 @@
 shared_examples_for "a cacher" do
-  it {should respond_to(:fetch).with(1).argument}
+  it { expect(subject).to respond_to(:fetch).with(1).argument }
 
   describe "#store" do
-    it "should return the value that is stored" do
-      subject.store("key","value").should eq "value"
+    it "returns the value that is stored" do
+      expect(subject.store("key","value")).to eq("value")
     end
   end
 end

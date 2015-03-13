@@ -8,7 +8,7 @@ describe FullCircle::API do
   describe "#fetch_events_for_ad" do
     skip "calls the appropriate method on call_api_method" do
       mock_connection = double()
-      mock_connection.should_receive(:call_api_method).with("ad.getEvents",{adId: "1"}) do
+      expect(mock_connection).to receive(:call_api_method).with("ad.getEvents",{adId: "1"}) do
         class ResponseDouble
           def body
           end
@@ -28,7 +28,7 @@ describe FullCircle::API do
       it "returns an array of one event" do
         VCR.use_cassette "single_get_events_response" do
           results = api.fetch_events_for_ad "81213"
-          results.should be_a Array
+          expect(results).to be_a Array
           results
         end
       end
@@ -39,8 +39,8 @@ describe FullCircle::API do
       it "returns an array of multiple events" do
         VCR.use_cassette "multple_get_events_response" do
           results = api.fetch_events_for_ad "89690"
-          results.should be_a Array
-          (results.length > 1).should eq(true)
+          expect(results).to be_a Array
+          expect(results.length > 1).to eq(true)
         end
       end
     end
@@ -49,7 +49,7 @@ describe FullCircle::API do
       it "returns an empty array" do
         VCR.use_cassette "empty_get_events_response" do
           results = api.fetch_events_for_ad "1"
-          results.should eq []
+          expect(results).to eq([])
         end
       end
     end
@@ -61,7 +61,7 @@ describe FullCircle::API do
 
     skip "calls the appropriate method on call_api_method" do
       mock_connection = double()
-      mock_connection.should_receive(:call_api_method).with("ad.getCoupons",{adId: "1"})
+      expect(mock_connection).to receive(:call_api_method).with("ad.getCoupons",{adId: "1"})
 
       described_class.new(mock_connection).fetch_coupons_for_ad("1")
     end
@@ -70,8 +70,8 @@ describe FullCircle::API do
       it "returns an array of one coupon" do
         VCR.use_cassette "single_get_coupons_response" do
           results = api.fetch_coupons_for_ad "123094"
-          results.should be_a Array
-          results.length.should eq 1
+          expect(results).to be_an(Array)
+          expect(results.length).to eq(1)
         end
       end
     end
@@ -80,8 +80,8 @@ describe FullCircle::API do
       it "returns an array of multiple coupons" do
         VCR.use_cassette "multiple_get_coupons_response" do
           results = api.fetch_coupons_for_ad "82196"
-          results.should be_a Array
-          results.length.should eq 3
+          expect(results).to be_a(Array)
+          expect(results.length).to eq(3)
         end
       end
     end
@@ -90,7 +90,7 @@ describe FullCircle::API do
       it "returns an empty array" do
         VCR.use_cassette "empty_get_coupons_response" do
           results = api.fetch_coupons_for_ad "1"
-          results.should eq []
+          expect(results).to eq([])
         end
       end
     end
@@ -99,7 +99,7 @@ describe FullCircle::API do
   describe "#fetch_event_areas" do
     skip "calls the appropriate method on call_api_method" do
       mock_connection = double()
-      mock_connection.should_receive(:call_api_method).with("city.getEventAreas")
+      expect(mock_connection).to receive(:call_api_method).with("city.getEventAreas")
 
       described_class.new(mock_connection).fetch_event_areas
     end
@@ -108,8 +108,7 @@ describe FullCircle::API do
       it "returns an array of one event area" do
         VCR.use_cassette "single_event_areas_response" do
           results = api.fetch_event_areas
-          results.should be_a Array
-          results.length.should eq 1
+          expect(results.length).to eq(1)
         end
       end
     end
@@ -118,8 +117,7 @@ describe FullCircle::API do
       it "returns an array of multiple event areas" do
         VCR.use_cassette "multiple_event_areas_response" do
           results = api.fetch_event_areas
-          results.should be_a Array
-          results.length.should eq 7
+          expect(results.length).to eq(7)
         end
       end
     end
@@ -129,7 +127,7 @@ describe FullCircle::API do
       it "returns an empty array" do
         VCR.use_cassette "empty_event_area_response" do
           results = api.fetch_event_areas
-          results.should eq []
+          expect(results).to eq([])
         end
       end
     end
@@ -140,7 +138,7 @@ describe FullCircle::API do
 
     skip "calls the appropriate method on call_api_method" do
       mock_connection = double()
-      mock_connection.should_receive(:call_api_method).with("city.getUpcomingEvents",{})
+      expect(mock_connection).to receive(:call_api_method).with("city.getUpcomingEvents",{})
 
       described_class.new(mock_connection).fetch_upcoming_events
     end
@@ -155,8 +153,7 @@ describe FullCircle::API do
       it "returns an array of one event" do
         VCR.use_cassette "single_get_upcoming_events_response" do
           results = api.fetch_upcoming_events areaId: "592"
-          results.should be_a Array
-          results.length.should be 1
+          expect(results.length).to eq(1)
         end
       end
 
@@ -166,8 +163,7 @@ describe FullCircle::API do
       it "returns an array of multiple events" do
         VCR.use_cassette "multiple_get_upcoming_events_response" do
           results = api.fetch_upcoming_events
-          results.should be_a Array
-          (results.length > 1).should eq(true)
+          expect(results.length > 1).to eq(true)
         end
       end
     end
@@ -177,7 +173,7 @@ describe FullCircle::API do
       it "returns an empty array" do
         VCR.use_cassette "empty_get_upcoming_events_response" do
           results = api.fetch_upcoming_events
-          results.should eq []
+          expect(results).to eq([])
         end
       end
     end

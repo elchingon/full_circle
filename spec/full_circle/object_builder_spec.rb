@@ -9,14 +9,14 @@ describe FullCircle::ObjectBuilder do
 
     it "builds a new event with the appropriate attribute set" do
       object = builder.from_api_hash("id" => "123", "title" => "Hello World")
-      object.id.should eq "123"
-      object.title.should eq "Hello World"
+      expect(object.id).to eq("123")
+      expect(object.title).to eq("Hello World")
     end
 
     it "builds a new event with camelcased attributes converted to underscored attributes" do
       object = builder.from_api_hash("linkUrl" => "http://www.google.com", "siteId" => "77")
-      object.link_url.should eq "http://www.google.com"
-      object.site_id.should eq "77"
+      expect(object.link_url).to eq("http://www.google.com")
+      expect(object.site_id).to eq("77")
     end
 
   end
