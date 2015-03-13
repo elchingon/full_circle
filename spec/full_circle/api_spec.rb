@@ -34,7 +34,7 @@ describe FullCircle::API do
       end
 
     end
-    
+
     context "with multiple events" do
       it "returns an array of multiple events" do
         VCR.use_cassette "multple_get_events_response" do
@@ -65,7 +65,7 @@ describe FullCircle::API do
 
       described_class.new(mock_connection).fetch_coupons_for_ad("1")
     end
-    
+
     context "with one coupon" do
       it "returns an array of one coupon" do
         VCR.use_cassette "single_get_coupons_response" do
@@ -161,7 +161,7 @@ describe FullCircle::API do
       end
 
     end
-    
+
     context "with multiple events" do
       it "returns an array of multiple events" do
         VCR.use_cassette "multiple_get_upcoming_events_response" do

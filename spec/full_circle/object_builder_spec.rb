@@ -12,7 +12,7 @@ describe FullCircle::ObjectBuilder do
       object.id.should eq "123"
       object.title.should eq "Hello World"
     end
-    
+
     it "builds a new event with camelcased attributes converted to underscored attributes" do
       object = builder.from_api_hash("linkUrl" => "http://www.google.com", "siteId" => "77")
       object.link_url.should eq "http://www.google.com"

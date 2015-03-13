@@ -18,7 +18,7 @@ module FullCircle
       collection_array
     end
 
-    
+
     private
 
     def response_hash

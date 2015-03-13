@@ -91,6 +91,6 @@ http_interactions:
         appetizers" imageURL="http://tours.360durango.com/89690/event_58652.jpg"></event></events></ad-getEventsResponse>
 
 '
-    http_version: 
+    http_version:
   recorded_at: Wed, 12 Dec 2012 17:31:41 GMT
 recorded_with: VCR 2.3.0

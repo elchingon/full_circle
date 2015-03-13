@@ -6,7 +6,7 @@ module FullCircle
     # Creates a new response builder
     # api_results - collection of objects to be built into the response
     # args
-    #   metadata: hash of metadata 
+    #   metadata: hash of metadata
     #   object_builder: The object builder to use for building api objects
     def initialize(api_results, args={})
       @api_results = api_results
@@ -21,6 +21,6 @@ module FullCircle
 
       Response.new(objects,metadata)
     end
-    
+
   end
 end

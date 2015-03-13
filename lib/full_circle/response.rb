@@ -1,7 +1,7 @@
 module FullCircle
   class Response
     attr_reader :results, :page, :total_pages, :total_results, :results_per_page
-    
+
     def initialize(results, metadata)
       @results = results
       @page = metadata.fetch(:page){1}

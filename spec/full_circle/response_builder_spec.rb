@@ -14,11 +14,11 @@ describe FullCircle::ResponseBuilder do
     subject {object_builder_double}
     it_behaves_like "an object builder"
   end
- 
+
   describe "#build" do
     context "with empty array of api_results" do
       subject{ described_class.new [], object_builder: object_builder_double }
-      
+
       it "calls object_builder.from_api_hash" do
         object_builder_double.should_not_receive(:from_api_hash)
         subject.build
@@ -28,7 +28,7 @@ describe FullCircle::ResponseBuilder do
 
     context "with an array of multiple api_results" do
       subject{ described_class.new [{},{}], object_builder: object_builder_double }
-      
+
       it "calls object_builder.from_api_hash" do
         object_builder_double.should_receive(:from_api_hash).with({}).exactly(2).times
         subject.build
@@ -37,7 +37,7 @@ describe FullCircle::ResponseBuilder do
 
     describe "response outgoing messages" do
       subject{ described_class.new [{},{}], object_builder: object_builder_double }
-      
+
       it "should create a response with the correct arguments" do
         FullCircle::Response.should_receive(:new).with([nil,nil],{})
 

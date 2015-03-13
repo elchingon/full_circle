@@ -39,6 +39,6 @@ module FullCircle
     def ad_id
       hash.fetch("ad"){{}}["id"]
     end
-      
+
   end
 end

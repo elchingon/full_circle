@@ -55,6 +55,6 @@ http_interactions:
         other coupons for products.</restrictions></coupon></coupons></ad-getCouponsResponse>
 
 '
-    http_version: 
+    http_version:
   recorded_at: Mon, 18 Mar 2013 04:30:36 GMT
 recorded_with: VCR 2.4.0

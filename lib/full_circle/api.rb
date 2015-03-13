@@ -1,6 +1,6 @@
 module FullCircle
   class API
-  
+
     attr_reader :connection
 
     def initialize(connection)
