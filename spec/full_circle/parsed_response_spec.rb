@@ -24,15 +24,16 @@ describe FullCircle::ParsedResponse do
 EOS
       end
 
-      subject { described_class.new(xml).metadata }
+      it 'sets the appropriate kes and values in the hash' do
+        response = described_class.new(xml)
 
-      its([:page]){should eq 2}
-      its([:results_per_page]){should eq 2}
-      its([ :total_pages ]){should eq 541 }
-      its([ :total_results ]){should eq 1081}
-
-
-
+        expect(response.metadata).to eq({
+          page: 2,
+          results_per_page: 2,
+          total_pages: 541,
+          total_results: 1081
+        })
+      end
     end
 
     context "with no provided metadata" do
@@ -56,13 +57,16 @@ EOS
 EOS
       end
 
-      subject { described_class.new(xml).metadata }
+      it 'sets the appropriate kes and values in the hash' do
+        response = described_class.new(xml)
 
-      its([ :page ]){should eq 1}
-      its([ :total_pages ]){should eq 1 }
-      its([ :total_results ]) {should eq 2}
-      its([ :results_per_page ]) {should eq 2 }
-
+        expect(response.metadata).to eq({
+          page: 1,
+          results_per_page: 2,
+          total_pages: 1,
+          total_results: 2
+        })
+      end
     end
   end
 
@@ -79,8 +83,11 @@ EOS
 EOS
       end
 
-      subject{described_class.new(xml).results}
-      it { should eq [] }
+      it 'returns an empty results array' do
+        response = described_class.new(xml)
+
+        expect(response.results).to eq([])
+      end
     end
 
     context "with one result" do
@@ -100,8 +107,11 @@ EOS
 EOS
       end
 
-      subject{described_class.new(xml).results}
-      its(:length){should eq 1 }
+      it 'returns one object in the results array' do
+        response = described_class.new(xml)
+
+        expect(response.results.length).to eq(1)
+      end
 
     end
 
@@ -126,9 +136,11 @@ EOS
 EOS
       end
 
-      subject { described_class.new(xml).results }
+      it 'returns an array with all results' do
+        response = described_class.new(xml)
 
-      its(:length){should eq 2}
+        expect(response.results.length).to eq(2)
+      end
     end
 
   end

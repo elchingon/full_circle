@@ -4,8 +4,22 @@ describe FullCircle::Connection do
 
   subject {FullCircle::Connection.new "360durango.com"}
 
-  its(:domain) {should == "360durango.com"}
-  its(:base_uri) {should == "http://api.360durango.com/1.0/"}
+  describe "#domain" do
+    it "returns the value set in the constructor" do
+      conn = described_class.new "360durango.com"
+
+      expect(conn.domain).to eq('360durango.com')
+    end
+  end
+
+  describe "#base_uri" do
+    it "returns formats the domain into the proper uri" do
+      conn = described_class.new "360durango.com"
+
+      expect(conn.base_uri).to eq('http://api.360durango.com/1.0/')
+    end
+  end
+
 
   let!(:req_stub) {stub_http_request(:get, "api.360durango.com/1.0/ad.getCoupons").with(query: {adId: "81304"})
     .to_return(body: "abc")

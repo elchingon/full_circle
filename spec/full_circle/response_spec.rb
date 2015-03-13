@@ -2,28 +2,75 @@ require 'spec_helper'
 
 describe FullCircle::Response do
 
-  describe "defaults" do
-    subject{described_class.new([],{})}
+  describe '#results' do
+    it 'defaults to an empty array' do
+      response = described_class.new([], {})
 
-    its(:results){should eq []}
-    its(:page){should eq 1}
-    its(:total_pages){should eq 1}
-    its(:results_per_page){should eq 0 }
-    its(:total_results){should eq 0 }
+      expect(response.results).to eq([])
+    end
 
+    it 'can be set to the first argument in the constructor' do
+      results = double('results', length: 0)
+
+      response = described_class.new(results, {})
+
+      expect(response.results).to eq(results)
+    end
   end
 
-  describe "with metadata" do
-    subject{described_class.new([],{page: 2, total_pages:5, results_per_page: 5, total_results: 25})}
+  describe '#page' do
+    it 'defaults to 1' do
+      response = described_class.new([], {})
 
-    its(:results){should eq []}
-    its(:page){should eq 2}
-    its(:total_pages){should eq 5}
-    its(:results_per_page){should eq 5 }
-    its(:total_results){should eq 25 }
+      expect(response.page).to eq(1)
+    end
 
+    it 'can be set in the metadata hash' do
+      response = described_class.new([], {page: 2 })
+
+      expect(response.page).to eq(2)
+    end
   end
 
+  describe '#total_pages' do
+    it 'defaults to 1' do
+      response = described_class.new([], {})
 
+      expect(response.total_pages).to eq(1)
+    end
 
+    it 'can be set in the metadata hash' do
+      response = described_class.new([], {total_pages: 5 })
+
+      expect(response.total_pages).to eq(5)
+    end
+  end
+
+  describe '#results_per_page' do
+    it 'defaults to 0' do
+      response = described_class.new([], {})
+
+      expect(response.results_per_page).to eq(0)
+    end
+
+    it 'can be set in the metadata hash' do
+      response = described_class.new([], {results_per_page: 5 })
+
+      expect(response.results_per_page).to eq(5)
+    end
+  end
+
+  describe '#total_results' do
+    it 'defaults to 0' do
+      response = described_class.new([], {})
+
+      expect(response.total_results).to eq(0)
+    end
+
+    it 'can be set in the metadata hash' do
+      response = described_class.new([], {total_results: 25 })
+
+      expect(response.total_results).to eq(25)
+    end
+  end
 end

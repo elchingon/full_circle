@@ -6,7 +6,7 @@ describe FullCircle::API do
   let!(:api){FullCircle::API.new(FullCircle::Connection.new("360durango.com"))}
 
   describe "#fetch_events_for_ad" do
-    pending "calls the appropriate method on call_api_method" do
+    skip "calls the appropriate method on call_api_method" do
       mock_connection = double()
       mock_connection.should_receive(:call_api_method).with("ad.getEvents",{adId: "1"}) do
         class ResponseDouble
@@ -40,7 +40,7 @@ describe FullCircle::API do
         VCR.use_cassette "multple_get_events_response" do
           results = api.fetch_events_for_ad "89690"
           results.should be_a Array
-          (results.length > 1).should be_true
+          (results.length > 1).should eq(true)
         end
       end
     end
@@ -59,7 +59,7 @@ describe FullCircle::API do
 
   describe "#fetch_coupons_for_ad" do
 
-    pending "calls the appropriate method on call_api_method" do
+    skip "calls the appropriate method on call_api_method" do
       mock_connection = double()
       mock_connection.should_receive(:call_api_method).with("ad.getCoupons",{adId: "1"})
 
@@ -97,7 +97,7 @@ describe FullCircle::API do
   end
 
   describe "#fetch_event_areas" do
-    pending "calls the appropriate method on call_api_method" do
+    skip "calls the appropriate method on call_api_method" do
       mock_connection = double()
       mock_connection.should_receive(:call_api_method).with("city.getEventAreas")
 
@@ -138,7 +138,7 @@ describe FullCircle::API do
 
   describe "#fetch_upcoming_events" do
 
-    pending "calls the appropriate method on call_api_method" do
+    skip "calls the appropriate method on call_api_method" do
       mock_connection = double()
       mock_connection.should_receive(:call_api_method).with("city.getUpcomingEvents",{})
 
@@ -167,7 +167,7 @@ describe FullCircle::API do
         VCR.use_cassette "multiple_get_upcoming_events_response" do
           results = api.fetch_upcoming_events
           results.should be_a Array
-          (results.length > 1).should be_true
+          (results.length > 1).should eq(true)
         end
       end
     end
