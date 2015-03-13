@@ -24,5 +24,4 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "vcr", '~> 2.9'
   gem.add_development_dependency "webmock"
   gem.add_development_dependency "rake"
-  gem.add_development_dependency "rb-inotify", "~> 0.9"
 end
