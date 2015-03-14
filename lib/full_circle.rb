@@ -1,4 +1,5 @@
 require 'multi_xml'
+require "active_support"
 require "active_support/core_ext"
 
 require_relative 'full_circle/version'
