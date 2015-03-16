@@ -1,11 +1,12 @@
 require 'spec_helper'
 
-describe FullCircle::ParsedResponse do
+module FullCircle
+  describe ParsedResponse do
 
-  describe "#metadata" do
-    context "with provided metadata" do
-      let(:xml) do
-        <<"EOS"
+    describe "#metadata" do
+      context "with provided metadata" do
+        let(:xml) do
+          <<-"EOS"
         <?xml version="1.0"?>
         <ad-getListResponse page="2" resultsPerPage="2" totalPages="541" totalResults="1081">
           <ads>
@@ -21,24 +22,24 @@ describe FullCircle::ParsedResponse do
             </ad>
           </ads>
         </ad-getListResponse>
-EOS
+          EOS
+        end
+
+        it 'sets the appropriate kes and values in the hash' do
+          response = described_class.new(xml)
+
+          expect(response.metadata).to eq(ResponseMetadata.new({
+            page: 2,
+            results_per_page: 2,
+            total_pages: 541,
+            total_results: 1081
+          }))
+        end
       end
 
-      it 'sets the appropriate kes and values in the hash' do
-        response = described_class.new(xml)
-
-        expect(response.metadata).to eq({
-          page: 2,
-          results_per_page: 2,
-          total_pages: 541,
-          total_results: 1081
-        })
-      end
-    end
-
-    context "with no provided metadata" do
-      let (:xml) do
-        <<"EOS"
+      context "with no provided metadata" do
+        let (:xml) do
+          <<-"EOS"
         <?xml version="1.0"?>
         <ad-getCouponsResponse>
           <coupons>
@@ -54,46 +55,46 @@ EOS
             </coupon>
           </coupons>
         </ad-getCouponsResponse>
-EOS
-      end
+          EOS
+        end
 
-      it 'sets the appropriate kes and values in the hash' do
-        response = described_class.new(xml)
+        it 'sets the appropriate kes and values in the hash' do
+          response = described_class.new(xml)
 
-        expect(response.metadata).to eq({
-          page: 1,
-          results_per_page: 2,
-          total_pages: 1,
-          total_results: 2
-        })
+          expect(response.metadata).to eq(ResponseMetadata.new({
+            page: 1,
+            results_per_page: 2,
+            total_pages: 1,
+            total_results: 2
+          }))
+        end
       end
     end
-  end
 
 
-  describe "#results" do
+    describe "#results" do
 
-    context "with no results" do
-      let(:xml) do
-        <<"EOS"
+      context "with no results" do
+        let(:xml) do
+          <<-"EOS"
         <?xml version="1.0"?>
         <ad-getCouponsResponse>
           <coupons></coupons>
         </ad-getCouponsResponse>
-EOS
+          EOS
+        end
+
+        it 'returns an empty results array' do
+          response = described_class.new(xml)
+
+          expect(response.results).to eq([])
+        end
       end
 
-      it 'returns an empty results array' do
-        response = described_class.new(xml)
+      context "with one result" do
 
-        expect(response.results).to eq([])
-      end
-    end
-
-    context "with one result" do
-
-      let (:xml) do
-        <<"EOS"
+        let (:xml) do
+          <<-"EOS"
         <?xml version="1.0"?>
         <ad-getCouponsResponse>
           <coupons>
@@ -104,20 +105,20 @@ EOS
             </coupon>
           </coupons>
         </ad-getCouponsResponse>
-EOS
+          EOS
+        end
+
+        it 'returns one object in the results array' do
+          response = described_class.new(xml)
+
+          expect(response.results.length).to eq(1)
+        end
+
       end
 
-      it 'returns one object in the results array' do
-        response = described_class.new(xml)
-
-        expect(response.results.length).to eq(1)
-      end
-
-    end
-
-    context "with multiple results" do
-      let(:xml) do
-        <<"EOS"
+      context "with multiple results" do
+        let(:xml) do
+          <<-"EOS"
         <?xml version="1.0"?>
         <ad-getListResponse page="2" resultsPerPage="2" totalPages="541" totalResults="1081">
           <ads>
@@ -133,16 +134,17 @@ EOS
             </ad>
           </ads>
         </ad-getListResponse>
-EOS
+          EOS
+        end
+
+        it 'returns an array with all results' do
+          response = described_class.new(xml)
+
+          expect(response.results.length).to eq(2)
+        end
       end
 
-      it 'returns an array with all results' do
-        response = described_class.new(xml)
-
-        expect(response.results.length).to eq(2)
-      end
     end
 
   end
-
 end

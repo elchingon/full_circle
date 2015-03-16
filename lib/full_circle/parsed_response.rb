@@ -43,12 +43,12 @@ module FullCircle
     end
 
     def build_metadata
-      {
-        page: Integer(response_hash.fetch("page"){1}),
-        total_pages: Integer(response_hash.fetch("totalPages"){1}),
-        total_results: Integer(response_hash.fetch("totalResults"){results.length}),
-        results_per_page: Integer(response_hash.fetch("resultsPerPage"){results.length})
-      }
+      ResponseMetadata.new(
+        page: response_hash.fetch("page"){1},
+        total_pages: response_hash.fetch("totalPages"){1},
+        total_results: response_hash.fetch("totalResults"){results.length},
+        results_per_page: response_hash.fetch("resultsPerPage"){results.length}
+      )
     end
 
     def sub_enumerable_key_names(hash)
