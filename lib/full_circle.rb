@@ -11,6 +11,7 @@ require_relative 'full_circle/parsed_response'
 require_relative 'full_circle/response_builder'
 require_relative 'full_circle/response'
 require_relative 'full_circle/api'
+require_relative 'full_circle/api_factory'
 
 module FullCircle
 
