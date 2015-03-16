@@ -7,9 +7,10 @@ module FullCircle
     # domain - domain of directory (ex. 360durango.com)
     # args
     #   - cache - Caching object to use
-    def initialize(domain, args={})
+    def initialize(domain, cache: NullCache.new, response_class: ParsedResponse)
       @domain = domain
-      @cache = args.fetch(:cache){NullCache.new}
+      @cache = cache
+      @response_class = response_class
     end
 
     def base_uri
@@ -25,8 +26,7 @@ module FullCircle
         cache.store(uri_str, response_text)
       end
 
-      Response.new body
-
+      response_class.new(body)
     end
 
     NullCache = Class.new do
@@ -40,8 +40,8 @@ module FullCircle
     end
 
     private
-    Response = Struct.new(:body)
 
+    attr_reader :response_class
 
     def uri_string(method_name, query_params)
       "#{base_uri}#{method_name}?#{query_params.to_query}"

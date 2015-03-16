@@ -27,11 +27,14 @@ module FullCircle
       process_response(response, object_builder: UpcomingEventBuilder.new)
     end
 
+    def all_ads
+
+    end
+
     private
 
     def process_response(response, object_builder: ObjectBuilder.new)
-      pr = ParsedResponse.new(response.body)
-      builder = ResponseBuilder.new pr.results, metadata: pr.metadata,
+      builder = ResponseBuilder.new response.results, metadata: response.metadata,
         object_builder: object_builder
       builder.build.results
     end
