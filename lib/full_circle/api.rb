@@ -34,9 +34,10 @@ module FullCircle
     private
 
     def process_response(response, object_builder: ObjectBuilder.new)
-      builder = ResponseBuilder.new response.results, metadata: response.metadata,
-        object_builder: object_builder
-      builder.build.results
+      builder = ResponseBuilder.new
+      response_object = builder.build response.results, object_builder: object_builder
+
+      response_object.results
     end
   end
 end
