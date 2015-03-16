@@ -1,15 +1,15 @@
 require 'spec_helper'
 
 describe FullCircle::ResponseMetadata do
-  describe '#pages' do
+  describe '#page' do
     it "defaults to 1" do
       metadata = described_class.new
-      expect(metadata.pages).to eq(1)
+      expect(metadata.page).to eq(1)
     end
 
     it "allows the value to be set in the constructor" do
-      metadata = described_class.new pages: "2"
-      expect(metadata.pages).to eq(2)
+      metadata = described_class.new page: "2"
+      expect(metadata.page).to eq(2)
     end
   end
 
@@ -46,6 +46,18 @@ describe FullCircle::ResponseMetadata do
     it "allows the value to be set in the constructor" do
       metadata = described_class.new total_pages: "5"
       expect(metadata.total_pages).to eq(5)
+    end
+  end
+
+  describe "#has_more_pages?" do
+    it "returns true if page < total_pages" do
+      metadata = described_class.new page: 1, total_pages: 5
+      expect(metadata).to have_more_pages
+    end
+
+    it "returns false if page == total_pages" do
+      metadata = described_class.new page: 5, total_pages: 5
+      expect(metadata).not_to have_more_pages
     end
   end
 end
