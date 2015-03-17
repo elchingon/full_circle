@@ -18,10 +18,14 @@ module FullCircle
           "slideshowCount"=>"0",
           "linkCount"=>"0",
           "address"=>{
+            "id" => "1234",
             "addr1"=>"949 E 2ND AV",
             "city"=>"DURANGO",
             "state"=>"CO",
-            "zipCode"=>"81301"
+            "zipCode"=>"81301",
+            "phone"=>"970.555.5555",
+            "latitude"=> "37.329903",
+            "longitude"=> "-107.60534",
           }
         }
 
@@ -39,10 +43,14 @@ module FullCircle
           slideshow_count: 0,
           link_count: 0,
           address: Address.new(
+            id: 1234,
             addr_1: "949 E 2ND AV",
             city: "DURANGO",
             state: "CO",
-            zip_code: "81301"
+            zip_code: "81301",
+            phone: "970.555.5555",
+            latitude: 37.329903,
+            longitude: -107.60534
           )
 
           expect(ad).to eq(expected_ad)

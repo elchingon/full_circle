@@ -18,10 +18,14 @@ module FullCircle::Builders
       if hash.has_key?("address")
         address_hash = hash["address"]
         ad_hash[:address]=FullCircle::Address.new({
+          id: address_hash["id"],
           addr_1: address_hash["addr1"],
           city: address_hash["city"],
           state: address_hash["state"],
-          zip_code: address_hash["zipCode"]
+          zip_code: address_hash["zipCode"],
+          phone: address_hash["phone"],
+          latitude: address_hash["latitude"],
+          longitude: address_hash["longitude"]
         })
       end
 
