@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.360durango.com/1.0/ad.getList?orgId=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - api.360durango.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Mar 2015 21:03:21 GMT
+      Server:
+      - Apache/2.2.3 (Red Hat)
+      X-Powered-By:
+      - PHP/5.3.15
+      Set-Cookie:
+      - PHPSESSID=1sf7pdm2a2s8g5oannskgn73o4; path=/
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      - post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Last-Modified:
+      - Tue, 17 Mar 2015 21:03:21 GMT
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '180'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <errorResponse methodGroup="ad" methodName="getList"><errorCode>1203</errorCode><errorDetails>Encountered error while retrieving necessary method information from database.</errorDetails></errorResponse>
+    http_version: 
+  recorded_at: Tue, 17 Mar 2015 21:03:21 GMT
+recorded_with: VCR 2.9.3

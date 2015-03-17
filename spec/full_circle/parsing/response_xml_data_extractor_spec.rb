@@ -267,6 +267,39 @@ describe FullCircle::Parsing::ResponseXMLDataExtractor do
           end
         end
       end
+
+      context "with an error response" do
+        let(:xml) do
+          <<-EOS
+          <errorResponse methodGroup="ad" methodName="getList">
+            <errorCode>1203</errorCode>
+            <errorDetails>
+              Encountered error while retrieving necessary method information from database.
+            </errorDetails>
+          </errorResponse>
+          EOS
+        end
+
+        it 'returns an empty results array' do
+          response = subject.extract(xml)
+
+          expect(response.entities).to eq([])
+        end
+
+        it 'returns the correct metadata' do
+          response = subject.extract(xml)
+
+          expect(response.metadata).to eq(
+            FullCircle::ResponseMetadata.new({
+              page: 1,
+              results_per_page: 0,
+              total_pages: 0,
+              total_results: 0
+            })
+          )
+        end
+
+      end
     end
   end
 end

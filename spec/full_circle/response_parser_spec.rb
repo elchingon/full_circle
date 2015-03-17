@@ -97,34 +97,20 @@ module FullCircle
           end
         end
 
-        context "with multiple results" do
+        context "when no results" do
+          it "returns a response with an empty array of results" do
+            mock_response = double("response", entities: [],
+                                   entity_key: nil, metadata: double("metadata"))
+            extractor = instance_double "FullCircle::Parsing::ResponseXMLDataExtractor",
+              extract: mock_response
+            parser = described_class.new data_extractor: extractor
 
-          context "and provided metadata" do
+            response = parser.parse("<html></html>")
 
-            let (:xml) do
-              <<-EOS
-          <ad-getListResponse page="2" resultsPerPage="2" totalPages="541" totalResults="1081">
-            <ads>
-              <ad id="81009" name="4Core" url="http://360Durango.com/Environmental/4core.html"
-                eventCount="0" couponCount="0" jobCount="0" locationCount="1" popupCount="0"
-                slideshowCount="0" linkCount="0">
-                  <address addr1="949 E 2ND AV" city="DURANGO" state="CO" zipCode="81301"></address>
-              </ad>
-              <ad id="123760" name="4x4 Auto " url="http://360Durango.com/Automotive/4x4Auto.html"
-                description="Used Car Dealership Cortez 360Durango Colorado" eventCount="0"
-                couponCount="0" jobCount="0" locationCount="0" popupCount="0" slideshowCount="0"
-                linkCount="0">
-              </ad>
-            </ads>
-          </ad-getListResponse>
-              EOS
-            end
+            expect(response.results).to eq([])
           end
         end
-
       end
-
-
     end
   end
 end

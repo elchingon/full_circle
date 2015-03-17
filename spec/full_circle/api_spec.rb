@@ -106,6 +106,17 @@ describe FullCircle::API do
       end
     end
 
+    # API server returns an error response instead of an empty array
+    context "when no results are found when searching by org id" do
+
+      it "returns_an empty array" do
+        VCR.use_cassette "get_ads_with_nonexisted_orgId_response" do
+          results = api.fetch_ads(orgId: 1)
+          expect(results.length).to eq(0)
+        end
+      end
+    end
+
     # context "with no events" do
     #   let(:connection){FullCircle::Connection.new("boatersbluepages.com")}
     #   it "returns an empty array" do

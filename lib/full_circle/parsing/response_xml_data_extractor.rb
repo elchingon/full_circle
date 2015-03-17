@@ -4,17 +4,28 @@ module FullCircle::Parsing
     def extract(raw_xml)
       parsed_xml = parse_xml(raw_xml)
 
-      results_array = get_results_array(parsed_xml)
-      entity_key = get_entity_key(parsed_xml)
-      metadata = get_metadata(parsed_xml, results_array)
+      if is_error_response?(parsed_xml)
+        metadata = FullCircle::ResponseMetadata.new page: 1,
+          results_per_page: 0, total_pages: 0, total_results: 0
 
-      Response.new(results_array, entity_key, metadata)
+        Response.new([], nil,  metadata)
+      else
+        results_array = get_results_array(parsed_xml)
+        entity_key = get_entity_key(parsed_xml)
+        metadata = get_metadata(parsed_xml, results_array)
+
+        Response.new(results_array, entity_key, metadata)
+      end
     end
 
     private
 
     def parse_xml(raw_xml)
       MultiXml.parse(raw_xml)
+    end
+
+    def is_error_response?(parsed_xml)
+      parsed_xml.has_key?("errorResponse")
     end
 
     def get_results_array(parsed_xml)

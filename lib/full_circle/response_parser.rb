@@ -10,15 +10,19 @@ module FullCircle
     def parse(xml_string, entity_builder: nil)
       extractor_response = data_extractor.extract(xml_string)
 
-      if entity_builder.nil?
-        entity_builder = entity_builder_for_key(extractor_response.entity_key)
-      end
+      if extractor_response.entities.any?
+        if entity_builder.nil?
+          entity_builder = entity_builder_for_key(extractor_response.entity_key)
+        end
 
-      entities = extractor_response.entities.map do |entity_hash|
-        entity_builder.build(entity_hash)
-      end
+        entities = extractor_response.entities.map do |entity_hash|
+          entity_builder.build(entity_hash)
+        end
 
-      Response.new(entities, extractor_response.metadata)
+        Response.new(entities, extractor_response.metadata)
+      else
+        Response.new([], extractor_response.metadata)
+      end
     end
 
     private
