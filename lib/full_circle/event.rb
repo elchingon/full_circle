@@ -5,6 +5,7 @@ module FullCircle
     values do
       attribute :id, Integer
       attribute :date, Date
+      attribute :end_date, Date
       attribute :expire_date, Date
       attribute :time, String
       attribute :end_time, String

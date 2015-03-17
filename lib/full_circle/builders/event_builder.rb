@@ -5,6 +5,7 @@ module FullCircle
         id: hash.fetch("id"),
         date: hash.fetch("date"),
         expire_date: hash["expireDate"],
+        end_date: hash["endDate"],
         time: hash["time"],
         end_time: hash["endTime"],
         title: hash["title"],
