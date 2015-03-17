@@ -4,6 +4,7 @@ module FullCircle::Builders
       ad_hash={
         id: hash.fetch("id"),
         name: hash.fetch('name'),
+        description: hash['description'],
         url: hash.fetch('url'),
         event_count: hash['eventCount'],
         coupon_count: hash['couponCount'],

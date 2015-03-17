@@ -7,6 +7,7 @@ module FullCircle
     values do
       attribute :id, Integer
       attribute :name, String
+      attribute :description, String
       attribute :url, String
       attribute :event_count, Integer
       attribute :coupon_count, Integer

@@ -8,6 +8,7 @@ module FullCircle
         data = {
           "id"=>"81009",
           "name"=>"4Core",
+          "description"=>"Environmental services in Durango",
           "url"=>"http://360Durango.com/Environmental/4core.html",
           "eventCount"=>"0",
           "couponCount"=>"0",
@@ -28,6 +29,7 @@ module FullCircle
 
         expected_ad = Ad.new id: 81009,
           name: "4Core",
+          description: "Environmental services in Durango",
           url: "http://360Durango.com/Environmental/4core.html",
           event_count: 0,
           coupon_count: 0,
