@@ -4,6 +4,7 @@ $:.unshift File.expand_path(File.dirname(__FILE__) + '/../lib')
 require 'rspec'
 require 'webmock/rspec'
 require 'vcr'
+require 'shoulda/matchers'
 require 'pry'
 require 'full_circle'
 Dir["./spec/support/**/*.rb"].sort.each {|f| require f}

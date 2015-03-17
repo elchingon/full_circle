@@ -19,7 +19,7 @@ describe FullCircle::API do
       it "returns an empty array" do
         VCR.use_cassette "empty_get_events_for_ad_response" do
           results = api.fetch_events_for_ad "1"
-          expect(results).to eq([])
+          expect(results.length).to eq(0)
         end
       end
     end
@@ -49,7 +49,7 @@ describe FullCircle::API do
       it "returns an empty array" do
         VCR.use_cassette "empty_get_coupons_response" do
           results = api.fetch_coupons_for_ad "1"
-          expect(results).to eq([])
+          expect(results.length).to eq(0)
         end
       end
     end
@@ -70,7 +70,7 @@ describe FullCircle::API do
       it "returns an empty array" do
         VCR.use_cassette "empty_event_area_response" do
           results = api.fetch_event_areas
-          expect(results).to eq([])
+          expect(results.length).to eq(0)
         end
       end
     end
@@ -91,7 +91,7 @@ describe FullCircle::API do
       it "returns an empty array" do
         VCR.use_cassette "empty_get_upcoming_events_response" do
           results = api.fetch_upcoming_events
-          expect(results).to eq([])
+          expect(results.length).to eq(0)
         end
       end
     end

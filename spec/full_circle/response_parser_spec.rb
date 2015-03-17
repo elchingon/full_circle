@@ -26,13 +26,13 @@ module FullCircle
           it 'returns one object in the results array' do
             response = subject.parse xml
 
-            expect(response.entities.length).to eq(1)
+            expect(response.length).to eq(1)
           end
 
           it 'returns an object parsed into the correct object' do
             response = subject.parse(xml)
 
-            coupon = response.entities.first
+            coupon = response.first
 
             expected_coupon = Coupon.new id: 32025,
               name: "90 for 90!",
@@ -68,13 +68,13 @@ module FullCircle
           it 'returns one object in the results array' do
             response = subject.parse xml
 
-            expect(response.entities.length).to eq(1)
+            expect(response.length).to eq(1)
           end
 
           it 'returns an object parsed into the correct object' do
             response = subject.parse(xml)
 
-            ad = response.entities.first
+            ad = response.first
 
             expected_ad = Ad.new id: 81009,
               name: "4Core",

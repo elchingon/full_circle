@@ -22,6 +22,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency "multi_xml"
   gem.add_dependency "activesupport", ">= 3.2"
   gem.add_development_dependency "rspec", '~> 3.2'
+  gem.add_development_dependency "shoulda-matchers", '~> 2.6'
   gem.add_development_dependency "vcr", '~> 2.9'
   gem.add_development_dependency "webmock"
   gem.add_development_dependency "rake"

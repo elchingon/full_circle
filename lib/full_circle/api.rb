@@ -12,32 +12,31 @@ module FullCircle
     def fetch_events_for_ad(id,params={})
       request_params = {page: 1, resultsPerPage: results_per_page, adId: id}.merge(params)
       response_xml = connection.call_api_method("ad.getEvents", request_params)
-      response_parser.parse(response_xml).entities
+      response_parser.parse(response_xml)
     end
 
     def fetch_coupons_for_ad(id,params={})
       request_params = {page: 1, resultsPerPage: results_per_page, adId: id}.merge(params)
       response_xml = connection.call_api_method("ad.getCoupons", request_params)
-      response_parser.parse(response_xml).entities
+      response_parser.parse(response_xml)
     end
 
     def fetch_event_areas(params={})
       request_params = {page: 1, resultsPerPage: results_per_page}.merge(params)
       response_xml = connection.call_api_method("city.getEventAreas", request_params)
-      response_parser.parse(response_xml).entities
+      response_parser.parse(response_xml)
     end
 
     def fetch_upcoming_events(params={})
       request_params = {page: 1, resultsPerPage: results_per_page}.merge(params)
       response_xml = connection.call_api_method("city.getUpcomingEvents", params)
       response_parser.parse(response_xml, entity_builder: Builders::UpcomingEventBuilder)
-        .entities
     end
 
     def fetch_ads(params={})
       request_params = {page: 1, resultsPerPage: results_per_page}.merge(params)
       response_xml = connection.call_api_method("ad.getList", params)
-      response_parser.parse(response_xml).entities
+      response_parser.parse(response_xml)
     end
 
     private
