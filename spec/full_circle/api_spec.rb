@@ -96,4 +96,24 @@ describe FullCircle::API do
       end
     end
   end
+
+  describe "#fetch_ads" do
+
+    it "returns an array of ads" do
+      VCR.use_cassette "get_ads_response" do
+        results = api.fetch_ads
+        expect(results.length > 1).to eq(true)
+      end
+    end
+
+    # context "with no events" do
+    #   let(:connection){FullCircle::Connection.new("boatersbluepages.com")}
+    #   it "returns an empty array" do
+    #     VCR.use_cassette "empty_get_upcoming_events_response" do
+    #       results = api.fetch_upcoming_events
+    #       expect(results).to eq([])
+    #     end
+    #   end
+    # end
+  end
 end

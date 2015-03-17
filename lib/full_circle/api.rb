@@ -34,6 +34,12 @@ module FullCircle
         .entities
     end
 
+    def fetch_ads(params={})
+      request_params = {page: 1, resultsPerPage: results_per_page}.merge(params)
+      response_xml = connection.call_api_method("ad.getList", params)
+      response_parser.parse(response_xml).entities
+    end
+
     private
 
     attr_reader :response_parser, :results_per_page
