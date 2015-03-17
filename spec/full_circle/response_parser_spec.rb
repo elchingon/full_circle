@@ -32,7 +32,7 @@ module FullCircle
           it 'returns an object parsed into the correct object' do
             response = subject.parse(xml)
 
-            coupon = response.first
+            coupon = response.entities.first
 
             expected_coupon = Coupon.new id: 32025,
               name: "90 for 90!",
@@ -74,7 +74,7 @@ module FullCircle
           it 'returns an object parsed into the correct object' do
             response = subject.parse(xml)
 
-            ad = response.first
+            ad = response.entities.first
 
             expected_ad = Ad.new id: 81009,
               name: "4Core",

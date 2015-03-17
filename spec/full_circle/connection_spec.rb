@@ -35,7 +35,7 @@ describe FullCircle::Connection do
 
     it "returns the correct data" do
       response = subject.call_api_method "ad.getCoupons", adId: "81304"
-      expect(response.raw_xml).to eq("abc")
+      expect(response).to eq("abc")
     end
 
     context "without cache" do

@@ -1,9 +1,10 @@
 module FullCircle
   class Response
-    attr_reader :results
+    attr_reader :entities, :metadata
 
-    def initialize(results)
-      @results = results
+    def initialize(entities, metadata)
+      @entities = entities
+      @metadata = metadata
     end
 
   end

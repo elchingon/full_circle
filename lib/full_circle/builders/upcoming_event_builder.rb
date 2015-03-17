@@ -1,14 +1,8 @@
-require 'ostruct'
-
 module FullCircle
-  class UpcomingEventBuilder
-    def initialize
-      @domain = "360durango.com"
-    end
+  class Builders::UpcomingEventBuilder
 
-    def from_api_hash(hash)
-      @hash = hash
-      result = OpenStruct.new({
+    def self.build(hash)
+      result = Event.new({
         id: hash.fetch("id"),
         date: hash.fetch("date"),
         title: hash.fetch("title"),
@@ -20,25 +14,15 @@ module FullCircle
 
         image_url: hash.fetch("ad"){{}}.fetch("logoImage"){{}}["url"],
         end_date: hash["endDate"],
+        price: hash["price"],
+        link_text: hash["linkText"],
+        link_url: hash["linkUrl"],
+        featured: hash["featured"],
         expire_date: hash["expireDate"],
         end_time: hash["endTime"],
         description: hash["__content__"],
-        ad_id: ad_id,
+        ad_id: hash.fetch("ad"){{}}["id"]
       })
     end
-
-
-    private
-    attr_reader :hash
-    attr_reader :domain
-
-    def event_id
-      hash.fetch("id")
-    end
-
-    def ad_id
-      hash.fetch("ad"){{}}["id"]
-    end
-
   end
 end

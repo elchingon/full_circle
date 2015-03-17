@@ -3,41 +3,34 @@ module FullCircle
 
     attr_reader :connection
 
-    def initialize(connection)
+    def initialize(connection, response_parser: ResponseParser.new)
       @connection=connection
+      @response_parser = response_parser
     end
 
     def fetch_events_for_ad(id)
-      response = connection.call_api_method("ad.getEvents", adId: id)
-      process_response(response)
+      response_xml = connection.call_api_method("ad.getEvents", adId: id)
+      response_parser.parse(response_xml).entities
     end
 
     def fetch_coupons_for_ad(id)
-      response = connection.call_api_method("ad.getCoupons", adId: id)
-      process_response(response)
+      response_xml = connection.call_api_method("ad.getCoupons", adId: id)
+      response_parser.parse(response_xml).entities
     end
 
     def fetch_event_areas()
-      response = connection.call_api_method("city.getEventAreas")
-      process_response(response)
+      response_xml = connection.call_api_method("city.getEventAreas")
+      response_parser.parse(response_xml).entities
     end
 
     def fetch_upcoming_events(params={})
-      response = connection.call_api_method("city.getUpcomingEvents", params)
-      process_response(response, object_builder: UpcomingEventBuilder.new)
-    end
-
-    def all_ads
-
+      response_xml = connection.call_api_method("city.getUpcomingEvents", params)
+      response_parser.parse(response_xml, entity_builder: Builders::UpcomingEventBuilder)
+        .entities
     end
 
     private
 
-    def process_response(response, object_builder: ObjectBuilder.new)
-      builder = ResponseBuilder.new
-      response_object = builder.build response.results, object_builder: object_builder
-
-      response_object.results
-    end
+    attr_reader :response_parser
   end
 end
