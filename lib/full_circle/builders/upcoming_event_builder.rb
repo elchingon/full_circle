@@ -6,7 +6,7 @@ module FullCircle
         id: hash.fetch("id"),
         date: hash.fetch("date"),
         title: hash.fetch("title"),
-        time: hash.fetch("time"),
+        time: hash["time"],
         all_day_event: hash.fetch("allDayEvent"),
         date_mode: hash.fetch("dateMode"),
         site_id: hash.fetch("siteId"),
