@@ -2,24 +2,32 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.1019thewave.com/1.0/city.getEventAreas
+    uri: http://api.boatersbluepages.com/1.0/city.getEventAreas?page=1&resultsPerPage=20
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - api.boatersbluepages.com
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 26 Mar 2013 19:29:44 GMT
+      - Tue, 17 Mar 2015 14:50:34 GMT
       Server:
       - Apache/2.2.3 (Red Hat)
       X-Powered-By:
       - PHP/5.3.15
       Set-Cookie:
-      - PHPSESSID=agovqqkve5n9n88hbhr2c447m0; path=/
+      - PHPSESSID=dlopm0p3p99s82tf5lrjdcvnt7; path=/
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Cache-Control:
@@ -28,20 +36,20 @@ http_interactions:
       Pragma:
       - no-cache
       Last-Modified:
-      - Tue, 26 Mar 2013 19:29:44 GMT
+      - Tue, 17 Mar 2015 14:50:34 GMT
+      Vary:
+      - Accept-Encoding
       Content-Length:
-      - '166'
+      - '132'
       Connection:
       - close
       Content-Type:
       - text/xml
     body:
-      encoding: US-ASCII
-      string: ! '<?xml version="1.0"?>
-
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
         <city-getEventAreasResponse page="1" resultsPerPage="20" totalPages="0" totalResults="0"><eventAreas></eventAreas></city-getEventAreasResponse>
-
-'
-    http_version:
-  recorded_at: Tue, 26 Mar 2013 19:29:44 GMT
-recorded_with: VCR 2.4.0
+    http_version: 
+  recorded_at: Tue, 17 Mar 2015 14:50:34 GMT
+recorded_with: VCR 2.9.3

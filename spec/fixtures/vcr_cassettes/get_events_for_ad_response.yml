@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.360durango.com/1.0/ad.getEvents?adId=81299&page=1&resultsPerPage=20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - api.360durango.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Mar 2015 14:50:33 GMT
+      Server:
+      - Apache/2.2.3 (Red Hat)
+      X-Powered-By:
+      - PHP/5.3.15
+      Set-Cookie:
+      - PHPSESSID=09mgd1be4u5sdvp6ttl2pjk000; path=/
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      - post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Last-Modified:
+      - Tue, 17 Mar 2015 14:50:33 GMT
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1199'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
+        <ad-getEventsResponse><events><event id="83392" date="2015-03-17" expireDate="2016-03-04" time="17:00:00" endTime="20:00:00" title="2-4-1 Pint Specials" allDayEvent="0" times_vary="0" location="Ska Brewing World Headquarters" type="Food / Beverage Specials" dateMode="4" siteId="77" linkUrl="http://www.skabrewing.com" featured="0" description="2 pints for the price of one!" imageURL="http://tours.360durango.com/81299/events/83392.jpg" url="2-4-1-pint-specials"></event><event id="74766" date="2015-03-17" expireDate="2015-04-14" time="18:00:00" endTime="20:00:00" title="Trivia Night at Ska" allDayEvent="0" times_vary="0" location="Ska Brewing World Headquarters" type="Entertainment" dateMode="4" siteId="77" price="Free Trivia" linkText="Like Us on Facebook!" linkUrl="https://www.facebook.com/skabrew" featured="0" description="Super Ted's Super Trivia Nite at Ska Brewing with host Ted Holteen. 2-4-1 Pint Specials! What to Do in Durango, Colorado.&#10;&#10;Top three teams win BEER!  &#10;&#10;Check out &quot;The Container&quot; for dinner!" imageURL="http://tours.360durango.com/81299/events/74766.jpg" url="trivia-night-at-ska"></event><event id="67409" date="2015-03-18" expireDate="2016-03-03" time="09:00:00" endTime="20:00:00" title="$3 Pinstripe Red Ale" allDayEvent="0" times_vary="0" location="Ska Brewing World Headquarters" type="Auctions" dateMode="4" siteId="77" linkText="Like us on Facebook" linkUrl="https://www.facebook.com/skabrew" featured="0" description="$3 pints of our award winning Pinstripe Ale all day!" imageURL="http://tours.360durango.com/81299/events/67409.jpg" url="3-pinstripe-red-ale"></event><event id="88471" date="2015-03-19" expireDate="2015-03-26" time="17:00:00" endTime="19:00:00" title="#TBT Throwback Thursdays" allDayEvent="0" times_vary="0" location="Ska Brewing World Headquarters" type="Food / Beverage Specials" dateMode="4" siteId="77" linkUrl="http://" featured="0" description="Throwback Thursdays featuring a throwback to home-style, comfort food from The Container Restaurant and beer specials. Also enjoy live music!" imageURL="http://tours.360durango.com/81299/events/88471.jpg" url="tbt-throwback-thursdays"></event><event id="92973" date="2015-03-20" expireDate="2015-05-01" time="17:00:00" endTime="20:00:00" title="Black Fridays!" allDayEvent="0" times_vary="0" location="Ska Brewing World HQ" type="Food / Beverage Specials" dateMode="4" siteId="77" linkUrl="http://" featured="0" description="$2 Dark Pints from 5-8pm." imageURL="http://tours.360durango.com/81299/events/darkstout.jpg" url="black-fridays"></event><event id="93357" date="2015-03-20" time="17:00:00" endTime="20:00:00" title="Vernal Equinox Party" allDayEvent="0" times_vary="0" location="Ska Brewing World HQ" type="Food / Beverage Specials" dateMode="1" siteId="77" linkUrl="http://" featured="0" description="Celebrate the first day of spring with the release of our 3rd stout in the Seasonal Stout Series. Vernal Minthe Stout is brewed with real peppermint, spearmint, cocoa nibs and vanilla beans." imageURL="http://tours.360durango.com/81299/events/MintheStoutRelease2015.jpg" url="vernal-equinox-party"></event><event id="67412" date="2015-03-21" expireDate="2016-03-03" time="11:00:00" endTime="19:00:00" title="$3 Buster Nut Brown Special" allDayEvent="0" times_vary="0" location="Ska Brewing World Headquarters" type="Food / Beverage Specials" dateMode="4" siteId="77" linkText="Like us on Facebook" linkUrl="https://www.facebook.com/skabrew" featured="0" description="$3 pints of our award winning Buster Nut Brown all day!" imageURL="http://tours.360durango.com/81299/events/67412.jpg" url="3-buster-nut-brown-special"></event><event id="65147" date="2015-05-07" expireDate="2015-09-03" time="17:00:00" endTime="19:00:00" title="Ska-B-Q" allDayEvent="0" times_vary="0" location="Ska World Headquarters" type="Food / Beverage Specials" dateMode="4" siteId="77" linkText="visit Ska Brewing online for more" linkUrl="http://skabrewing.com/main.html" featured="0" description="Live Music, Food, and Great Beer!" url="ska-b-q"></event></events></ad-getEventsResponse>
+    http_version: 
+  recorded_at: Tue, 17 Mar 2015 14:50:33 GMT
+recorded_with: VCR 2.9.3

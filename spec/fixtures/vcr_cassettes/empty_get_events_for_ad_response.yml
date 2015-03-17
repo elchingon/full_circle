@@ -2,24 +2,32 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.360durango.com/1.0/ad.getEvents?adId=1
+    uri: http://api.360durango.com/1.0/ad.getEvents?adId=1&page=1&resultsPerPage=20
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - api.360durango.com
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Wed, 12 Dec 2012 17:31:39 GMT
+      - Tue, 17 Mar 2015 14:50:33 GMT
       Server:
       - Apache/2.2.3 (Red Hat)
       X-Powered-By:
       - PHP/5.3.15
       Set-Cookie:
-      - PHPSESSID=imqd2m14tlvukfbpcr1ejj9fd5; path=/
+      - PHPSESSID=qgvf2faevqnt1m108r3tlff650; path=/
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Cache-Control:
@@ -28,20 +36,20 @@ http_interactions:
       Pragma:
       - no-cache
       Last-Modified:
-      - Wed, 12 Dec 2012 17:31:39 GMT
+      - Tue, 17 Mar 2015 14:50:33 GMT
+      Vary:
+      - Accept-Encoding
       Content-Length:
-      - '85'
+      - '82'
       Connection:
       - close
       Content-Type:
       - text/xml
     body:
-      encoding: US-ASCII
-      string: ! '<?xml version="1.0"?>
-
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
         <ad-getEventsResponse><events></events></ad-getEventsResponse>
-
-'
-    http_version:
-  recorded_at: Wed, 12 Dec 2012 17:31:42 GMT
-recorded_with: VCR 2.3.0
+    http_version: 
+  recorded_at: Tue, 17 Mar 2015 14:50:33 GMT
+recorded_with: VCR 2.9.3

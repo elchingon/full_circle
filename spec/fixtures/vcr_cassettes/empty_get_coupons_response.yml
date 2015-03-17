@@ -2,24 +2,32 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.360durango.com/1.0/ad.getCoupons?adId=1
+    uri: http://api.360durango.com/1.0/ad.getCoupons?adId=1&page=1&resultsPerPage=20
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - api.360durango.com
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Mon, 18 Mar 2013 04:25:33 GMT
+      - Tue, 17 Mar 2015 14:50:34 GMT
       Server:
       - Apache/2.2.3 (Red Hat)
       X-Powered-By:
       - PHP/5.3.15
       Set-Cookie:
-      - PHPSESSID=3e8eu74q5oej89robir9vgbpl0; path=/
+      - PHPSESSID=3p7ocikrcugoubovo3b6lit3o7; path=/
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Cache-Control:
@@ -28,20 +36,20 @@ http_interactions:
       Pragma:
       - no-cache
       Last-Modified:
-      - Mon, 18 Mar 2013 04:25:33 GMT
+      - Tue, 17 Mar 2015 14:50:34 GMT
+      Vary:
+      - Accept-Encoding
       Content-Length:
-      - '89'
+      - '81'
       Connection:
       - close
       Content-Type:
       - text/xml
     body:
-      encoding: US-ASCII
-      string: ! '<?xml version="1.0"?>
-
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0"?>
         <ad-getCouponsResponse><coupons></coupons></ad-getCouponsResponse>
-
-'
-    http_version:
-  recorded_at: Mon, 18 Mar 2013 04:25:35 GMT
-recorded_with: VCR 2.4.0
+    http_version: 
+  recorded_at: Tue, 17 Mar 2015 14:50:34 GMT
+recorded_with: VCR 2.9.3

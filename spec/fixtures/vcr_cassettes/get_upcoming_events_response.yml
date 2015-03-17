@@ -1,0 +1,337 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.360durango.com/1.0/city.getUpcomingEvents
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+      Host:
+      - api.360durango.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 17 Mar 2015 14:50:35 GMT
+      Server:
+      - Apache/2.2.3 (Red Hat)
+      X-Powered-By:
+      - PHP/5.3.15
+      Set-Cookie:
+      - PHPSESSID=2995gssrts7ofiho0e6en18m52; path=/
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      - post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Last-Modified:
+      - Tue, 17 Mar 2015 14:50:35 GMT
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '5844'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\"?>\n<city-getUpcomingEventsResponse page=\"1\"
+        resultsPerPage=\"20\" totalPages=\"7\" totalResults=\"129\"><events><event
+        id=\"71292\" date=\"2015-03-17\" expireDate=\"2025-12-31\" title=\"Gluten-Free
+        Tuesdays\" allDayEvent=\"1\" location=\"Carver Brewing Company\" type=\"Food
+        / Beverage Specials\" dateMode=\"4\" siteId=\"77\" linkText=\"Carver Brewing
+        Company\" linkUrl=\"http://www.360durango.com/Restaurants/carversbrewing.html\"
+        featured=\"0\" url=\"gluten-free-tuesdays\">Every Tuesday we offer Gluten-Free
+        Specials ALL DAY: that means breakfast, lunch, and dinner!<ad id=\"81201\"
+        name=\"Carver Brewing Company\" url=\"http://360Durango.com/Attractions/carversbrewing.html\"
+        description=\"Colorado's second-oldest Brew Pub, serving unique, traditional
+        beers and premium foods for breakfast, lunch, and dinner\" eventCount=\"8\"
+        couponCount=\"0\" jobCount=\"0\" locationCount=\"1\" popupCount=\"2\" slideshowCount=\"3\"
+        linkCount=\"10\"><address id=\"86971\" addr1=\"1022 Main Avenue\" city=\"Durango\"
+        state=\"CO\" zipCode=\"81301\" phone=\"970.259.2545\" latitude=\"37.274821\"
+        longitude=\"-107.880128\"></address><logo2Image url=\"http://tours.360durango.com/81201/logo2.gif\"
+        width=\"60\" height=\"60\"></logo2Image></ad></event><event id=\"75908\" date=\"2015-03-17\"
+        endDate=\"2025-12-31\" title=\"Birthday Special\" allDayEvent=\"1\" type=\"Food
+        / Beverage Specials\" dateMode=\"2\" siteId=\"77\" linkText=\"Like us on Facebook\"
+        linkUrl=\"https://www.facebook.com/orehouserestaurant\" featured=\"0\" url=\"birthday-special\">Receive
+        the % of your age off your meal on your Birthday!<ad id=\"81317\" name=\"Ore
+        House\" url=\"http://360Durango.com/Attractions/theorehouse.html\" description=\"Considered
+        to be the area's best Steakhouse offering a full bar with an excellent wine
+        cellar, the Ore House is one of Durango Colorado&#x2019;s oldest and finest
+        restaurants.\" eventCount=\"1\" couponCount=\"0\" jobCount=\"0\" locationCount=\"1\"
+        popupCount=\"9\" slideshowCount=\"0\" linkCount=\"4\"><address id=\"87088\"
+        addr1=\"147 E COLLEGE DR\" city=\"DURANGO\" state=\"CO\" zipCode=\"81301\"
+        phone=\"970.247.5707\" latitude=\"37.270215\" longitude=\"-107.880942\"></address><logoImage
+        url=\"http://tours.360durango.com/81317/logo.gif\" width=\"350\" height=\"383\"></logoImage><logo2Image
+        url=\"http://tours.360durango.com/81317/logo2.gif\" width=\"60\" height=\"60\"></logo2Image></ad></event><event
+        id=\"80733\" date=\"2015-03-17\" expireDate=\"2015-05-05\" title=\"Tortilla
+        Burger\" allDayEvent=\"1\" location=\"Lost Dog Bar &amp; Lounge\" type=\"Food
+        / Beverage Specials\" dateMode=\"4\" siteId=\"77\" price=\"$8.95\" linkUrl=\"http://\"
+        featured=\"0\" url=\"tortilla-burger\">8oz Beef patty in between 3 tortills
+        (corn or flour), smothered in green chile, topped with shredded cheddar and
+        jack cheeses, Pico de Gallo, shredded lettuce and homemade guacamole.<ad id=\"82578\"
+        name=\"Lost Dog Bar &amp; Lounge\" url=\"http://360Durango.com/Attractions/lostdogbarandlounge.html\"
+        description=\"Open daily with  lunch and dinner specials, high quality wells,
+        and an expansive bar. Book an event at the Lost Dog in our artsy, spacious
+        main room and outdoor Tiki Bar\" eventCount=\"1\" couponCount=\"0\" jobCount=\"0\"
+        locationCount=\"1\" popupCount=\"2\" slideshowCount=\"1\" linkCount=\"3\"><address
+        id=\"88356\" addr1=\"1150 MAIN AV\" city=\"DURANGO\" state=\"CO\" zipCode=\"81301\"
+        phone=\"970.259.0430\" latitude=\"37.276135\" longitude=\"-107.879392\"></address><logoImage
+        url=\"http://tours.360durango.com/82578/logo.gif\" width=\"350\" height=\"288\"></logoImage><logo2Image
+        url=\"http://tours.360durango.com/82578/logo2.gif\" width=\"60\" height=\"60\"></logo2Image></ad></event><event
+        id=\"90821\" date=\"2015-03-17\" endDate=\"2015-03-21\" title=\"39th Annual
+        Juried Exhibition\" allDayEvent=\"0\" location=\"Durango Arts Center\" type=\"Arts
+        / Exhibits\" dateMode=\"2\" siteId=\"77\" linkUrl=\"http://durangoarts.org/exhibits/current-upcoming/\"
+        featured=\"0\">39th Annual Juried Exhibition\nFebruary 20 &#x2013; March 21\nAn
+        annual juried exhibition open to new work in all mediums except film exhibiting
+        creativity and diversity. Artists also have the opportunity to exhibit the
+        non-accepted work in the Salon des Refuses installed at Steamworks Brewing
+        Company<ad id=\"80786\" name=\"Durango Arts Center\" url=\"http://360Durango.com/Attractions/durangoartcenter.html\"
+        description=\"A Community Hub for the Arts\" eventCount=\"7\" couponCount=\"0\"
+        jobCount=\"0\" locationCount=\"1\" popupCount=\"1\" slideshowCount=\"1\" linkCount=\"6\"><address
+        id=\"86547\" addr1=\"802 E 2ND AV\" city=\"DURANGO\" state=\"CO\" zipCode=\"81301\"
+        phone=\"970.259.2606\" latitude=\"37.272119\" longitude=\"-107.879575\"></address><logo2Image
+        url=\"http://tours.360durango.com/80786/logo2.gif\" width=\"60\" height=\"60\"></logo2Image></ad></event><event
+        id=\"92751\" date=\"2015-03-17\" endDate=\"2015-03-27\" title=\"Linda Pampinella
+        - 2nd Anniversary Celebration\" allDayEvent=\"1\" location=\"Pine River Valley
+        Bank - Durango\" type=\"Arts / Exhibits\" dateMode=\"2\" siteId=\"77\" linkUrl=\"http://\"
+        featured=\"0\" url=\"linda-pampinella-2nd-anniversary-celebration\">Artist
+        reception: March 5th, 3:30pm-5:00pm\nJoin us for a celebratory evening showcasing
+        Linda Pampinella's striking photography! Meet Linda and enjoy her images while
+        simultaneously commemorating the 2nd anniversary of the Community Artist Program.\n\nLinda's
+        work is largely inspired by the texture, color, and play of light that she
+        discovers in nature. Her award winning photography manifests the passion she
+        has for her creative work. Attend to be apart of a wonderful evening and exquisite
+        artwork.<ad id=\"81148\" name=\"Pine River Valley Bank\" url=\"http://360Durango.com/Attractions/pinerivervalleybank.html\"
+        description=\"We take pride in being your locally owned, hometown bank!\"
+        eventCount=\"1\" couponCount=\"0\" jobCount=\"1\" locationCount=\"4\" popupCount=\"0\"
+        slideshowCount=\"2\" linkCount=\"8\"><address id=\"204073\" addr1=\"301 N.
+        Commerce Drive\" city=\"Bayfield\" state=\"CO\" zipCode=\"81122\" phone=\"970.884.9583\"
+        latitude=\"37.233406\" longitude=\"-107.595439\"></address><logo2Image url=\"http://tours.360durango.com/81148/logo2.gif\"
+        width=\"60\" height=\"60\"></logo2Image></ad></event><event id=\"92752\" date=\"2015-03-17\"
+        endDate=\"2015-03-27\" title=\"Linda Smith: Fiber Art\" allDayEvent=\"1\"
+        location=\"Pine River Valley Bank- Bayfield branch\" type=\"Arts / Exhibits\"
+        dateMode=\"2\" siteId=\"77\" linkUrl=\"http://\" featured=\"0\" url=\"linda-smith-fiber-art\">Reception:
+        Friday, March 13th, from 4:30pm to 6:00pm\nLinda Smith's compelling woolen
+        fiber watercolor art will be on display for the month of March. She finds
+        the symphony and rhythms of nature inspiring to her work.\n\nMeet Linda at
+        the artist reception March 13th while delighting in her felted work and sumptuous
+        catered fare.<ad id=\"81148\" name=\"Pine River Valley Bank\" url=\"http://360Durango.com/Attractions/pinerivervalleybank.html\"
+        description=\"We take pride in being your locally owned, hometown bank!\"
+        eventCount=\"1\" couponCount=\"0\" jobCount=\"1\" locationCount=\"4\" popupCount=\"0\"
+        slideshowCount=\"2\" linkCount=\"8\"><address id=\"204073\" addr1=\"301 N.
+        Commerce Drive\" city=\"Bayfield\" state=\"CO\" zipCode=\"81122\" phone=\"970.884.9583\"
+        latitude=\"37.233406\" longitude=\"-107.595439\"></address><logo2Image url=\"http://tours.360durango.com/81148/logo2.gif\"
+        width=\"60\" height=\"60\"></logo2Image></ad></event><event id=\"93553\" date=\"2015-03-17\"
+        title=\"Ski Giveaway\" allDayEvent=\"1\" location=\"The Irish Embassy Pub\"
+        type=\"Fund Raiser\" dateMode=\"1\" siteId=\"77\" price=\"$5\" linkText=\"The
+        Irish Embassy Pub\" linkUrl=\"http://www.theirishembassypub.com\" featured=\"0\"
+        url=\"ski-giveaway\">Purchase a $5 ticket to win a pair of skis! All proceeds
+        benefit the Adaptive Sports Association. Drawing held at 7pm. Must be present
+        to win.<ad id=\"89690\" name=\"The Irish Embassy Pub\" url=\"http://360Durango.com/Attractions/TheIrishEmbassyPub.html\"
+        description=\"The Irish Embassy is Durango's downtown Pub, perfect for a nice
+        cold beer, live music and traditional Irish Fayre\" eventCount=\"15\" couponCount=\"0\"
+        jobCount=\"0\" locationCount=\"1\" popupCount=\"4\" slideshowCount=\"4\" linkCount=\"5\"><address
+        id=\"97856\" addr1=\"900 Main Ave.\" city=\"Durango\" state=\"CO\" zipCode=\"81301\"
+        phone=\"970.403.1200\" fax=\"970.403.1203\" latitude=\"37.273488\" longitude=\"-107.88027\"></address><logoImage
+        url=\"http://tours.360durango.com/89690/logo.gif\" width=\"153\" height=\"175\"></logoImage><logo2Image
+        url=\"http://tours.360durango.com/89690/logo2.gif\" width=\"60\" height=\"60\"></logo2Image></ad></event><event
+        id=\"93554\" date=\"2015-03-17\" title=\"St. Patrick's Day\" allDayEvent=\"1\"
+        location=\"The Irish Embassy Pub\" type=\"Food / Beverage Specials\" dateMode=\"1\"
+        siteId=\"77\" linkText=\"The Irish Embassy Pub\" linkUrl=\"http://www.theirishembassypub.com\"
+        featured=\"0\" url=\"st-patricks-day\">Open at 8am, drink specials all day,
+        live music from Patrick Crossing 6-8pm, Adaptive Sports Association fundraiser
+        7pm<ad id=\"89690\" name=\"The Irish Embassy Pub\" url=\"http://360Durango.com/Attractions/TheIrishEmbassyPub.html\"
+        description=\"The Irish Embassy is Durango's downtown Pub, perfect for a nice
+        cold beer, live music and traditional Irish Fayre\" eventCount=\"15\" couponCount=\"0\"
+        jobCount=\"0\" locationCount=\"1\" popupCount=\"4\" slideshowCount=\"4\" linkCount=\"5\"><address
+        id=\"97856\" addr1=\"900 Main Ave.\" city=\"Durango\" state=\"CO\" zipCode=\"81301\"
+        phone=\"970.403.1200\" fax=\"970.403.1203\" latitude=\"37.273488\" longitude=\"-107.88027\"></address><logoImage
+        url=\"http://tours.360durango.com/89690/logo.gif\" width=\"153\" height=\"175\"></logoImage><logo2Image
+        url=\"http://tours.360durango.com/89690/logo2.gif\" width=\"60\" height=\"60\"></logo2Image></ad></event><event
+        id=\"73541\" date=\"2015-03-17\" expireDate=\"2018-12-31\" time=\"06:00:00\"
+        endTime=\"10:00:00\" title=\"Morning Disaster\" allDayEvent=\"0\" location=\"XRock
+        105.3\" type=\"Entertainment\" dateMode=\"4\" siteId=\"77\" linkText=\"Like
+        us on Facebook!\" linkUrl=\"https://www.facebook.com/XRock105.3fm\" featured=\"0\"
+        url=\"morning-disaster\">Games and contests during our morning show with Jaime
+        Osborn.<ad id=\"169699\" name=\"XRock 105.3 FM\" url=\"http://360Durango.com/Attractions/XRock1053FM.html\"
+        description=\"Rock for the ages, a mix of your favorite classic rock with
+        popular current hits and the best songs on the B side:   &quot;Finally, a
+        radio station in Durango that doesn't suck!&quot;\" eventCount=\"4\" couponCount=\"0\"
+        jobCount=\"0\" locationCount=\"1\" popupCount=\"0\" slideshowCount=\"1\" linkCount=\"2\"><address
+        id=\"192679\" addr1=\"1135 Main Ave\" city=\"Durango\" state=\"CO\" zipCode=\"81301\"
+        phone=\"970.385.1053\" latitude=\"37.276029\" longitude=\"-107.88\"></address><logo2Image
+        url=\"http://tours.360durango.com/169699/logo2.gif\" width=\"60\" height=\"60\"></logo2Image></ad></event><event
+        id=\"92644\" date=\"2015-03-17\" time=\"09:00:00\" endTime=\"15:00:00\" title=\"St.
+        Patrick's Day Train\" allDayEvent=\"0\" location=\"Durango &amp; Silverton
+        Narrow Gauge Railroad\" type=\"Kids / Family\" dateMode=\"1\" siteId=\"77\"
+        linkText=\"Learn More\" linkUrl=\"http://www.durangotrain.com/events/st-patricks-day-celebration#.VO4XyPnF9hw\"
+        featured=\"0\" url=\"st-patricks-day-train\">You may not be lucky enough to
+        find your pot of gold at the end of the rainbow, but grab your favorite leprechaun
+        and enjoy a bit o' blarney riding a steam train to Cascade Canyon wilderness
+        area. Enjoy Irish-themed decor, live music and Irish drink specials for everyone
+        on the train all day!<ad id=\"81056\" name=\"Durango &amp; Silverton Narrow
+        Gauge Railroad\" url=\"http://360Durango.com/Attractions/durangoandsilvertonrailroad.html\"
+        description=\"Coal-fired, steam-powered trains carry passengers through the
+        majestic mountains of the San Juan National Forest from Durango to Silverton.\"
+        eventCount=\"8\" couponCount=\"0\" jobCount=\"0\" locationCount=\"1\" popupCount=\"0\"
+        slideshowCount=\"0\" linkCount=\"4\"><address id=\"86817\" addr1=\"479 Main
+        Avenue\" city=\"Durango\" state=\"CO\" zipCode=\"81301\" phone=\"888.872.4607\"
+        latitude=\"37.268136\" longitude=\"-107.882513\"></address><logo2Image url=\"http://tours.360durango.com/81056/logo2.gif\"
+        width=\"60\" height=\"60\"></logo2Image></ad></event><event id=\"90830\" date=\"2015-03-17\"
+        endDate=\"2015-04-05\" time=\"10:00:00\" endTime=\"17:00:00\" title=\"Turning
+        the Page: A retrospective of Artist Books\" allDayEvent=\"0\" location=\"Durango
+        Arts Center\" type=\"Arts / Exhibits\" dateMode=\"2\" siteId=\"77\" linkUrl=\"http://durangoarts.org/art-library/\"
+        featured=\"0\">Turning the Page: A retrospective of Artist Books by Catherine
+        Nash\nMARCH 6-APRIL 5\nArtist opening on Friday, March 6, 5-7 p.m.\nSecondary
+        reception on March 27 in conjunction with the Barbara Conrad Gallery\nInspired
+        by nature, and created of handmade paper and natural elements, Catherine Nash&#x2019;s
+        artist books span two decades of creative work.<ad id=\"80786\" name=\"Durango
+        Arts Center\" url=\"http://360Durango.com/Attractions/durangoartcenter.html\"
+        description=\"A Community Hub for the Arts\" eventCount=\"7\" couponCount=\"0\"
+        jobCount=\"0\" locationCount=\"1\" popupCount=\"1\" slideshowCount=\"1\" linkCount=\"6\"><address
+        id=\"86547\" addr1=\"802 E 2ND AV\" city=\"DURANGO\" state=\"CO\" zipCode=\"81301\"
+        phone=\"970.259.2606\" latitude=\"37.272119\" longitude=\"-107.879575\"></address><logo2Image
+        url=\"http://tours.360durango.com/80786/logo2.gif\" width=\"60\" height=\"60\"></logo2Image></ad></event><event
+        id=\"80306\" date=\"2015-03-17\" endDate=\"2025-12-31\" time=\"15:00:00\"
+        endTime=\"18:00:00\" title=\"Carver Brewing Happy Hour\" allDayEvent=\"0\"
+        location=\"Carver Brewing Company\" type=\"Happy Hour\" dateMode=\"2\" siteId=\"77\"
+        linkText=\"Carver Brewing Company\" linkUrl=\"http://www.360durango.com/Restaurants/carversbrewing.html\"
+        featured=\"0\" url=\"carver-brewing-happy-hour\">$3 Pints of Carver Brewing
+        Co.'s special brews!<ad id=\"81201\" name=\"Carver Brewing Company\" url=\"http://360Durango.com/Attractions/carversbrewing.html\"
+        description=\"Colorado's second-oldest Brew Pub, serving unique, traditional
+        beers and premium foods for breakfast, lunch, and dinner\" eventCount=\"8\"
+        couponCount=\"0\" jobCount=\"0\" locationCount=\"1\" popupCount=\"2\" slideshowCount=\"3\"
+        linkCount=\"10\"><address id=\"86971\" addr1=\"1022 Main Avenue\" city=\"Durango\"
+        state=\"CO\" zipCode=\"81301\" phone=\"970.259.2545\" latitude=\"37.274821\"
+        longitude=\"-107.880128\"></address><logo2Image url=\"http://tours.360durango.com/81201/logo2.gif\"
+        width=\"60\" height=\"60\"></logo2Image></ad></event><event id=\"83192\" date=\"2015-03-17\"
+        endDate=\"2015-07-22\" time=\"16:00:00\" endTime=\"18:00:00\" title=\"The
+        Happiest of Hours\" allDayEvent=\"0\" location=\"Kennebec Cafe\" type=\"Food
+        / Beverage Specials\" dateMode=\"2\" siteId=\"77\" linkText=\"Our Website\"
+        featured=\"0\" url=\"the-happiest-of-hours\">$2 Beers\n$5 Cosmos, Margaritas,
+        Bloody Mary's \n$5 Glass of  House Red or White \n$2 off Small Plate Appetizers<ad
+        id=\"92350\" name=\"Kennebec Cafe\" url=\"http://360Durango.com/Attractions/KennebecCafe.html\"
+        description=\"A taste of Tuscany 15 minutes from downtown Durango. Savor a
+        seasonal Mediterranean menu, great wines, &amp; pristine La Plata mountain
+        views. Events, catering &amp; full bar. \" eventCount=\"2\" couponCount=\"0\"
+        jobCount=\"0\" locationCount=\"1\" popupCount=\"4\" slideshowCount=\"4\" linkCount=\"6\"><address
+        id=\"98358\" addr1=\"4 County Road 124\" city=\"Hesperus\" state=\"CO\" zipCode=\"81326\"
+        phone=\"970.247.5674\" latitude=\"37.294508\" longitude=\"-108.045377\"></address><logoImage
+        url=\"http://tours.360durango.com/92350/logo.gif\" width=\"250\" height=\"206\"></logoImage><logo2Image
+        url=\"http://tours.360durango.com/92350/logo2.gif\" width=\"60\" height=\"60\"></logo2Image></ad></event><event
+        id=\"87001\" date=\"2015-03-17\" expireDate=\"2015-04-28\" time=\"16:00:00\"
+        title=\"$2Buck Tuesday\" allDayEvent=\"0\" location=\"Francisco's Restaurant\"
+        type=\"Food / Beverage Specials\" dateMode=\"4\" siteId=\"77\" price=\"BOGO
+        $2\" linkText=\"Like us on Facebook\" linkUrl=\"http://\" featured=\"0\" url=\"2buck-tuesday\">Sign
+        up for $2Buck Tuesday! Starting 10/7/14. Here's how it works...\n\nBuy 1 membership
+        for $10.00 (good for 2 people). Show this membership every Tuesday to your
+        server to receive one entree at regular price &amp; get the 2nd entree for
+        $2 bucks! \n\nMembership includes 6 different coupons for every month from
+        October to April 2015. For more details please call or come in and see us!<ad
+        id=\"81240\" name=\"Francisco's Restaurante y Cantina\" url=\"http://360Durango.com/Attractions/franciscosrestaurant.html\"
+        description=\"Durango's most historic restaurant since 1968, serving traditional
+        &amp; modern New Mexican cuisine, Steaks &amp; Seafood with over 30 Margarita's
+        to choose from! \" eventCount=\"3\" couponCount=\"0\" jobCount=\"0\" locationCount=\"1\"
+        popupCount=\"2\" slideshowCount=\"1\" linkCount=\"1\"><address id=\"87011\"
+        addr1=\"619 Main Avenue\" city=\"Durango\" state=\"CO\" zipCode=\"81301\"
+        phone=\"970.247.4098\" latitude=\"37.270541\" longitude=\"-107.881819\"></address><logoImage
+        url=\"http://tours.360durango.com/81240/logo.gif\" width=\"350\" height=\"138\"></logoImage><logo2Image
+        url=\"http://tours.360durango.com/81240/logo2.gif\" width=\"60\" height=\"60\"></logo2Image></ad></event><event
+        id=\"90604\" date=\"2015-03-17\" endDate=\"2015-05-31\" time=\"16:00:00\"
+        endTime=\"18:00:00\" title=\"Happy Hour Every Day!\" allDayEvent=\"0\" location=\"Seasons
+        Rotisserie &amp; Grill\" type=\"Happy Hour\" dateMode=\"2\" siteId=\"77\"
+        linkUrl=\"http://\" featured=\"0\" url=\"happy-hour-every-day\">Because once
+        a day is not enough!\n\nSpecialty Mules - $5\nChardonnay or Rose - $5\nHomemade
+        Bar Snacks - $5\n\nGet in here ... you know you want to!<ad id=\"78703\" name=\"Seasons\"
+        url=\"http://360Durango.com/Attractions/Seasons.html\" description=\"Fine
+        dining in historic downtown Durango with progressive menu and ever-changing
+        wine list\" eventCount=\"0\" couponCount=\"0\" jobCount=\"0\" locationCount=\"1\"
+        popupCount=\"3\" slideshowCount=\"3\" linkCount=\"6\"><address id=\"84321\"
+        addr1=\"764 Main Ave.\" city=\"Durango\" state=\"CO\" zipCode=\"81301\" phone=\"970.382.9790\"
+        fax=\"970.382.0452\" latitude=\"37.271969\" longitude=\"-107.880773\"></address><logoImage
+        url=\"http://tours.360durango.com/78703/logo.gif\" width=\"250\" height=\"175\"></logoImage><logo2Image
+        url=\"http://tours.360durango.com/78703/logo2.gif\" width=\"60\" height=\"60\"></logo2Image></ad></event><event
+        id=\"82719\" date=\"2015-03-17\" expireDate=\"2015-07-28\" time=\"16:30:00\"
+        endTime=\"17:30:00\" title=\"Locals Happy Hour\" allDayEvent=\"0\" location=\"Eolus
+        Bar and Dining\" type=\"Happy Hour\" dateMode=\"4\" siteId=\"77\" featured=\"0\"
+        url=\"locals-happy-hour\">Burger &amp; Beer $12\nHalf-Off all Sushi\n\n$2
+        Draft Beer\n$5 Cosmos<ad id=\"169260\" name=\"Eolus Bar and Dining\" url=\"http://360Durango.com/Attractions/EolusDurango.html\"
+        description=\"Eolus Bar &amp; Dining - In the heart of Durango's historic
+        downtown and shopping district. Featuring fine culinary treats, signature
+        cocktails, sushi, fine wines and much more.\" eventCount=\"7\" couponCount=\"0\"
+        jobCount=\"0\" locationCount=\"1\" popupCount=\"0\" slideshowCount=\"3\" linkCount=\"6\"><address
+        id=\"192228\" addr1=\"919 Main Ave\" city=\"Durango\" state=\"CO\" zipCode=\"81301\"
+        phone=\"970.259.2898\" latitude=\"37.273923\" longitude=\"-107.881057\"></address><logo2Image
+        url=\"http://tours.360durango.com/169260/logo2.png\" width=\"60\" height=\"32\"></logo2Image></ad></event><event
+        id=\"69538\" date=\"2015-03-17\" expireDate=\"2015-06-30\" time=\"17:00:00\"
+        endTime=\"21:00:00\" title=\"Mexican Night\" allDayEvent=\"0\" location=\"The
+        Kennebec\" type=\"Food / Beverage Specials\" dateMode=\"4\" siteId=\"77\"
+        price=\"$13 - $28\" linkText=\"Our Website\" linkUrl=\"http://www.kennebeccafe.com\"
+        featured=\"0\" url=\"mexican-night\">Authentic Mexican Cuisine\nPrepared by
+        Chef/Owner Miguel Carrillo\nFish Tacos, Green Chile Chicken Enchiladas, Chile
+        Relleno, Enchiladas Tampico and much more!<ad id=\"92350\" name=\"Kennebec
+        Cafe\" url=\"http://360Durango.com/Attractions/KennebecCafe.html\" description=\"A
+        taste of Tuscany 15 minutes from downtown Durango. Savor a seasonal Mediterranean
+        menu, great wines, &amp; pristine La Plata mountain views. Events, catering
+        &amp; full bar. \" eventCount=\"2\" couponCount=\"0\" jobCount=\"0\" locationCount=\"1\"
+        popupCount=\"4\" slideshowCount=\"4\" linkCount=\"6\"><address id=\"98358\"
+        addr1=\"4 County Road 124\" city=\"Hesperus\" state=\"CO\" zipCode=\"81326\"
+        phone=\"970.247.5674\" latitude=\"37.294508\" longitude=\"-108.045377\"></address><logoImage
+        url=\"http://tours.360durango.com/92350/logo.gif\" width=\"250\" height=\"206\"></logoImage><logo2Image
+        url=\"http://tours.360durango.com/92350/logo2.gif\" width=\"60\" height=\"60\"></logo2Image></ad></event><event
+        id=\"83392\" date=\"2015-03-17\" expireDate=\"2016-03-04\" time=\"17:00:00\"
+        endTime=\"20:00:00\" title=\"2-4-1 Pint Specials\" allDayEvent=\"0\" location=\"Ska
+        Brewing World Headquarters\" type=\"Food / Beverage Specials\" dateMode=\"4\"
+        siteId=\"77\" linkUrl=\"http://www.skabrewing.com\" featured=\"0\" url=\"2-4-1-pint-specials\">2
+        pints for the price of one!<ad id=\"81299\" name=\"Ska Brewing Company\" url=\"http://360Durango.com/Attractions/skabrewingcompany.html\"
+        description=\"People come from all over the world to visit Ska Brewing's World
+        HQ in Durango. That's probably because it's the source of Ska beer and also
+        a pretty great place to hang out.\" eventCount=\"8\" couponCount=\"0\" jobCount=\"3\"
+        locationCount=\"1\" popupCount=\"0\" slideshowCount=\"0\" linkCount=\"3\"><address
+        id=\"87070\" addr1=\"225 Girard St.\" city=\"Durango\" state=\"CO\" zipCode=\"81303\"
+        phone=\"970.247.5792\" latitude=\"37.238802\" longitude=\"-107.87615\"></address><logoImage
+        url=\"http://tours.360durango.com/81299/logo.gif\" width=\"350\" height=\"214\"></logoImage><logo2Image
+        url=\"http://tours.360durango.com/81299/logo2.gif\" width=\"60\" height=\"60\"></logo2Image></ad></event><event
+        id=\"92750\" date=\"2015-03-17\" endDate=\"2015-03-29\" time=\"17:00:00\"
+        endTime=\"21:00:00\" title=\"Locals Appreciation\" allDayEvent=\"0\" location=\"Kennebec
+        Cafe\" type=\"Food / Beverage Specials\" dateMode=\"2\" siteId=\"77\" linkUrl=\"http://\"
+        featured=\"0\" url=\"locals-appreciation\">In the midst of winter, there is
+        within an invincible Spring. \nSo,we're saying \"Hello March\" by appreciating
+        our locals.\n10 a la carte Dinner Entrees for $12 each<ad id=\"92350\" name=\"Kennebec
+        Cafe\" url=\"http://360Durango.com/Attractions/KennebecCafe.html\" description=\"A
+        taste of Tuscany 15 minutes from downtown Durango. Savor a seasonal Mediterranean
+        menu, great wines, &amp; pristine La Plata mountain views. Events, catering
+        &amp; full bar. \" eventCount=\"2\" couponCount=\"0\" jobCount=\"0\" locationCount=\"1\"
+        popupCount=\"4\" slideshowCount=\"4\" linkCount=\"6\"><address id=\"98358\"
+        addr1=\"4 County Road 124\" city=\"Hesperus\" state=\"CO\" zipCode=\"81326\"
+        phone=\"970.247.5674\" latitude=\"37.294508\" longitude=\"-108.045377\"></address><logoImage
+        url=\"http://tours.360durango.com/92350/logo.gif\" width=\"250\" height=\"206\"></logoImage><logo2Image
+        url=\"http://tours.360durango.com/92350/logo2.gif\" width=\"60\" height=\"60\"></logo2Image></ad></event><event
+        id=\"86816\" date=\"2015-03-17\" expireDate=\"2015-05-31\" time=\"17:30:00\"
+        endTime=\"22:00:00\" title=\"Terry Rickard at the Belle\" allDayEvent=\"0\"
+        location=\"Diamond Belle\" type=\"Concert / Live Music\" dateMode=\"4\" siteId=\"77\"
+        linkText=\"More Strater Hotel Events\" linkUrl=\"http://www.360durango.com/Hotels/StraterHotel/events.html\"
+        featured=\"0\" url=\"terry-rickard-at-the-belle\">Live Music by Terry Rickard<ad
+        id=\"91737\" name=\"Strater Hotel\" url=\"http://360Durango.com/Attractions/StraterHotel.html\"
+        description=\"An historic landmark hotel in downtown Durango...\" eventCount=\"8\"
+        couponCount=\"0\" jobCount=\"0\" locationCount=\"1\" popupCount=\"0\" slideshowCount=\"6\"
+        linkCount=\"9\"><address id=\"97783\" addr1=\"699 Main Ave.\" city=\"Durango\"
+        state=\"CO\" zipCode=\"81301\" phone=\"970.247.4431\" phone2=\"800.247.4431\"
+        latitude=\"37.27117\" longitude=\"-107.881583\"></address><logo2Image url=\"http://tours.360durango.com/91737/logo2.gif\"
+        width=\"60\" height=\"60\"></logo2Image></ad></event></events></city-getUpcomingEventsResponse>\n"
+    http_version: 
+  recorded_at: Tue, 17 Mar 2015 14:50:36 GMT
+recorded_with: VCR 2.9.3

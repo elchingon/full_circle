@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.boatersbluepages.com/1.0/city.getUpcomingEvents
+    uri: http://api.360durango.com/1.0/city.getEventAreas?page=1&resultsPerPage=20
     body:
       encoding: US-ASCII
       string: ''
@@ -14,20 +14,20 @@ http_interactions:
       User-Agent:
       - Ruby
       Host:
-      - api.boatersbluepages.com
+      - api.360durango.com
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Tue, 17 Mar 2015 14:50:36 GMT
+      - Tue, 17 Mar 2015 14:50:34 GMT
       Server:
       - Apache/2.2.3 (Red Hat)
       X-Powered-By:
       - PHP/5.3.15
       Set-Cookie:
-      - PHPSESSID=s92b7f5r0j85b7p5bfor4fcg94; path=/
+      - PHPSESSID=jj5mbc9urloa31ce5uhhcifa02; path=/
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Cache-Control:
@@ -36,11 +36,11 @@ http_interactions:
       Pragma:
       - no-cache
       Last-Modified:
-      - Tue, 17 Mar 2015 14:50:36 GMT
+      - Tue, 17 Mar 2015 14:50:34 GMT
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '136'
+      - '220'
       Connection:
       - close
       Content-Type:
@@ -49,7 +49,7 @@ http_interactions:
       encoding: UTF-8
       string: |
         <?xml version="1.0"?>
-        <city-getUpcomingEventsResponse page="1" resultsPerPage="20" totalPages="0" totalResults="0"><events></events></city-getUpcomingEventsResponse>
+        <city-getEventAreasResponse page="1" resultsPerPage="20" totalPages="1" totalResults="5"><eventAreas><eventArea id="736" name="Bayfield"></eventArea><eventArea id="596" name="Durango South"></eventArea><eventArea id="737" name="Hesperus"></eventArea><eventArea id="591" name="Historic Downtown"></eventArea><eventArea id="735" name="Vallecito"></eventArea></eventAreas></city-getEventAreasResponse>
     http_version: 
-  recorded_at: Tue, 17 Mar 2015 14:50:36 GMT
+  recorded_at: Tue, 17 Mar 2015 14:50:34 GMT
 recorded_with: VCR 2.9.3
