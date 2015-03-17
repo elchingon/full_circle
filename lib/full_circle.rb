@@ -20,6 +20,7 @@ require_relative 'full_circle/builders/event_area_builder'
 require_relative 'full_circle/builders/upcoming_event_builder'
 require_relative 'full_circle/api'
 require_relative 'full_circle/api_factory'
+require_relative 'full_circle/endpoint_iterator'
 
 module FullCircle
 
