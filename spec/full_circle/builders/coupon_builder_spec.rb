@@ -7,6 +7,7 @@ module FullCircle
         data = {
           "id"=>"32025",
           "name"=>"90 for 90!",
+          "url"=>"90-for-90-",
           "begin"=>"2013-04-04",
           "expire"=>"2013-04-30",
           "accept_offline"=>"1",
@@ -21,6 +22,7 @@ module FullCircle
 
         expected_coupon = Coupon.new id: 32025,
           name: "90 for 90!",
+          path_segment: "90-for-90-",
           begin: Date.new(2013, 04, 04),
           expire: Date.new(2013, 04, 30),
           accept_offline: true,
