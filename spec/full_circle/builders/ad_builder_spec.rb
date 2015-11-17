@@ -26,7 +26,10 @@ module FullCircle
             "phone"=>"970.555.5555",
             "latitude"=> "37.329903",
             "longitude"=> "-107.60534",
-          }
+          },
+          'logoImage' => { 'url'=>"http://tours.360durango.com/81009/logo.gif", 'width'=>"262", 'height'=>"250" },
+          'logo2Image' => { 'url'=>"http://tours.360durango.com/81009/logo2.png", 'width'=>"60", 'height'=>"60" },
+          'tileImage' => { 'url'=>"http://tours.360durango.com/81009/tile.gif", 'width'=>"140", 'height'=>"100" }
         }
 
         ad = described_class.build data
@@ -51,7 +54,22 @@ module FullCircle
             phone: "970.555.5555",
             latitude: 37.329903,
             longitude: -107.60534
-          )
+          ),
+           logo: Image.new(
+               url: 'http://tours.360durango.com/81009/logo.gif',
+               width: 262,
+               height: 250
+           ),
+           logo2: Image.new(
+               url: 'http://tours.360durango.com/81009/logo2.png',
+               width: 60,
+               height: 60
+           ),
+           tile: Image.new(
+               url: 'http://tours.360durango.com/81009/tile.gif',
+               width: 140,
+               height: 100
+           )
 
           expect(ad).to eq(expected_ad)
       end

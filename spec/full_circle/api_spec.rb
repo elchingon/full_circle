@@ -101,8 +101,12 @@ describe FullCircle::API do
 
     it "returns an array of ads" do
       VCR.use_cassette "get_ads_response" do
-        results = api.fetch_ads
+        results = api.fetch_ads.results
         expect(results.length > 1).to eq(true)
+
+        expect(results[0]['tile']['url']).to eq 'http://tours.360durango.com/89540/tile.gif'
+        expect(results[0]['logo']['width']).to eq 250
+        expect(results[0]['logo2']['height']).to eq 60
       end
     end
 

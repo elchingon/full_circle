@@ -29,7 +29,28 @@ module FullCircle::Builders
         })
       end
 
+      if hash.has_key?('logoImage')
+        ad_hash[:logo]= image_from_hash hash['logoImage']
+      end
+
+      if hash.has_key?('logo2Image')
+        ad_hash[:logo2]= image_from_hash hash['logo2Image']
+      end
+
+      if hash.has_key?('tileImage')
+        ad_hash[:tile]= image_from_hash hash['tileImage']
+      end
+
       FullCircle::Ad.new ad_hash
+    end
+
+    def self.image_from_hash(image_hash)
+      FullCircle::Image.new(
+          {
+              url: image_hash['url'],
+              width: image_hash['width'],
+              height: image_hash['height']
+          })
     end
   end
 end
