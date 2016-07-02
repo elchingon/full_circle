@@ -6,6 +6,7 @@ class FullCircle::Coupon
   values do
     attribute :id, Integer
     attribute :name, String
+    attribute :path_segment, String
     attribute :begin, Date
     attribute :expire, Date
     attribute :accept_offline, Boolean

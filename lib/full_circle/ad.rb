@@ -9,6 +9,9 @@ module FullCircle
       attribute :name, String
       attribute :description, String
       attribute :url, String
+      attribute :logo, FullCircle::Image
+      attribute :logo2, FullCircle::Image
+      attribute :tile, FullCircle::Image
       attribute :event_count, Integer
       attribute :coupon_count, Integer
       attribute :job_count, Integer

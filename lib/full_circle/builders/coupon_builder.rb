@@ -4,6 +4,7 @@ module FullCircle
       coupon = Coupon.new(
         id: hash.fetch("id"),
         name: hash.fetch("name"),
+        path_segment: hash['url'],
         begin: hash['begin'],
         expire: hash['expire'],
         accept_offline: hash['accept_offline'],

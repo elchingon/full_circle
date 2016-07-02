@@ -10,7 +10,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - '*/*'
+      - "*/*"
       User-Agent:
       - Ruby
       Host:
@@ -21,13 +21,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 17 Mar 2015 14:50:33 GMT
+      - Fri, 30 Oct 2015 14:00:05 GMT
       Server:
       - Apache/2.2.3 (Red Hat)
       X-Powered-By:
       - PHP/5.3.15
       Set-Cookie:
-      - PHPSESSID=8gt454h7e5ggg9rrvvt7rppks0; path=/
+      - PHPSESSID=407m01kf929eokjb54i255k1n2; path=/
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Cache-Control:
@@ -36,11 +36,11 @@ http_interactions:
       Pragma:
       - no-cache
       Last-Modified:
-      - Tue, 17 Mar 2015 14:50:33 GMT
+      - Fri, 30 Oct 2015 14:00:05 GMT
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '304'
+      - '314'
       Connection:
       - close
       Content-Type:
@@ -49,7 +49,8 @@ http_interactions:
       encoding: UTF-8
       string: |
         <?xml version="1.0"?>
-        <ad-getCouponsResponse><coupons><coupon id="22214" name="$10 OFF SELECT STYLES" begin="2015-03-15" expire="2015-05-15" accept_offline="1" accept_online="0" acceptMobile="1" acceptPrint="1"><offer>Select Ladies and Men's Regularly Priced Footwear above $75. </offer><restrictions>Coupon must be presented at time of purchase. Not valid with any other offer.</restrictions></coupon></coupons></ad-getCouponsResponse>
+        <ad-getCouponsResponse><coupons><coupon id="34922" name="$10 OFF New Styles" url="10-off-selected-styles" begin="2015-09-17" expire="2015-10-31" accept_offline="1" accept_online="0" acceptMobile="1" acceptPrint="1"><offer>Selected Ladies and Men's Footwear
+        Regularly Priced above $75. </offer><restrictions>Coupon must be presented at time of purchase. Not valid with any other offer. </restrictions></coupon></coupons></ad-getCouponsResponse>
     http_version: 
-  recorded_at: Tue, 17 Mar 2015 14:50:34 GMT
+  recorded_at: Fri, 30 Oct 2015 14:02:40 GMT
 recorded_with: VCR 2.9.3
