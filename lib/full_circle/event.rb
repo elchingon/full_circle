@@ -21,9 +21,14 @@ module FullCircle
       attribute :link_url, String
       attribute :featured, Boolean
       attribute :description, String
+      attribute :ad_id, Integer
+      attribute :ad_name, String
       attribute :image_url, String
       attribute :url, String
-      attribute :ad_id, Integer
+      attribute :regular_url, String
+      attribute :directory_url, String
+      attribute :phone, String
+      attribute :location_url, String    
     end
   end
 end

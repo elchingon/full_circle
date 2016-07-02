@@ -7,10 +7,10 @@ Gem::Specification.new do |gem|
   gem.name          = "full_circle"
   gem.version       = FullCircle::VERSION
   gem.authors       = ["Aaron Renner"]
-  gem.email         = ["aaron@animascodelabs.com"]
+  gem.email         = ["alexii@e7systems.com"]
   gem.description   = %q{Library for interfacing with the 360Directories API}
   gem.summary       = %q{Library for interfacing with the 360Directories API}
-  gem.homepage      = "https://github.com/animascodelabs/full_circle"
+  gem.homepage      = "https://github.com/elchingon/full_circle"
   gem.required_ruby_version = ">= 2.0.0"
 
   gem.files         = `git ls-files`.split($/)
