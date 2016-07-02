@@ -15,11 +15,5 @@ class FullCircle::Coupon
     attribute :accept_print, Boolean
     attribute :offer, String
     attribute :restrictions, String
-    attribute :url, String
-    attribute :regular_url, String
-    attribute :ad_name, String
-    attribute :directory_url, String
-    attribute :phone, String
-    attribute :location_url, String
   end
 end
