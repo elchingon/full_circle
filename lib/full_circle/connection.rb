@@ -13,7 +13,7 @@ module FullCircle
     end
 
     def base_uri
-      "http://api.#{domain}/1.0/"
+      "https://api.#{domain}/1.0/"
     end
 
     def call_api_method(method_name, query_params={})
