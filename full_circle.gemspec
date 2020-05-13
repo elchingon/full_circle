@@ -6,7 +6,7 @@ require 'full_circle/version'
 Gem::Specification.new do |gem|
   gem.name          = "full_circle"
   gem.version       = FullCircle::VERSION
-  gem.authors       = ["Aaron Renner"]
+  gem.authors       = ["Aaron Renner", "Alexii Carey"]
   gem.email         = ["alexii@e7systems.com"]
   gem.description   = %q{Library for interfacing with the 360Directories API}
   gem.summary       = %q{Library for interfacing with the 360Directories API}

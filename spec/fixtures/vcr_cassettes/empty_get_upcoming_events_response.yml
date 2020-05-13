@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.boatersbluepages.com/1.0/city.getUpcomingEvents
+    uri: https://api.boatersbluepages.com/1.0/city.getUpcomingEvents
     body:
       encoding: US-ASCII
       string: ''

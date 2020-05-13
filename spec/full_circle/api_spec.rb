@@ -54,6 +54,35 @@ describe FullCircle::API do
       end
     end
   end
+ 
+  describe "#fetch_jobs_for_ad" do
+
+    it "calls the appropriate method on call_api_method" do
+      parser = instance_double("FullCircle::Parsing::ResponseParser",
+        parse: double('result', entities: []))
+      mock_connection = instance_double("FullCircle::Connection")
+      allow(mock_connection).to receive(:call_api_method)
+
+      described_class.new(mock_connection, response_parser: parser).fetch_jobs_for_ad("1", page: 2)
+      expect(mock_connection).to have_received(:call_api_method).with("ad.getJobs",{adId: "1", page: 2, resultsPerPage: 20})
+    end
+
+    it "returns an array of jobs" do
+      VCR.use_cassette "get_jobs_for_ad_response" do
+        results = api.fetch_jobs_for_ad "81231"
+        expect(results.length > 0).to eq(true)
+      end
+    end
+
+    context "with no jobs" do
+      it "returns an empty array" do
+        VCR.use_cassette "empty_get_jobs_response" do
+          results = api.fetch_jobs_for_ad "1"
+          expect(results.length).to eq(0)
+        end
+      end
+    end
+  end
 
   describe "#fetch_event_areas" do
 

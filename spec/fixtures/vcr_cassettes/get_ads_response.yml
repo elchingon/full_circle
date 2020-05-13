@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.360durango.com/1.0/ad.getList
+    uri: https://api.360durango.com/1.0/ad.getList
     body:
       encoding: US-ASCII
       string: ''

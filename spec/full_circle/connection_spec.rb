@@ -16,12 +16,12 @@ describe FullCircle::Connection do
     it "returns formats the domain into the proper uri" do
       conn = described_class.new "360durango.com"
 
-      expect(conn.base_uri).to eq('http://api.360durango.com/1.0/')
+      expect(conn.base_uri).to eq('https://api.360durango.com/1.0/')
     end
   end
 
 
-  let!(:req_stub) {stub_request(:get, "api.360durango.com/1.0/ad.getCoupons").with(query: {adId: "81304"})
+  let!(:req_stub) {stub_request(:get, "https://api.360durango.com/1.0/ad.getCoupons").with(query: {adId: "81304"})
     .to_return(body: "abc")
   }
 
