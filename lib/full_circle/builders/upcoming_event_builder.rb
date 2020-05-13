@@ -11,7 +11,7 @@ module FullCircle
         date_mode: hash.fetch("dateMode"),
         site_id: hash.fetch("siteId"),
         type: hash.fetch("type"),
-
+        location_url: hash['location_url'],
         image_url: hash.fetch("ad"){{}}.fetch("logoImage"){{}}["url"],
         end_date: hash["endDate"],
         price: hash["price"],

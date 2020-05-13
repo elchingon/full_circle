@@ -18,6 +18,7 @@ module FullCircle
         price: hash['price'],
         link_text: hash['linkText'],
         link_url: hash['linkUrl'],
+        location_url: hash['location_url'],
         featured: hash['featured'],
         description: hash['description'],
         image_url: hash['imageURL'],
