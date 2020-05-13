@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.360durango.com/1.0/ad.getCoupons?adId=89588&page=1&resultsPerPage=20
+    uri: https://api.360durango.com/1.0/ad.getJobs?adId=1&page=1&resultsPerPage=20
     body:
       encoding: US-ASCII
       string: ''
@@ -21,13 +21,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 30 Oct 2015 14:00:05 GMT
+      - Wed, 13 May 2020 16:45:10 GMT
       Server:
-      - Apache/2.2.3 (Red Hat)
+      - Apache/2.2.15 (CentOS)
       X-Powered-By:
-      - PHP/5.3.15
+      - PHP/5.6.31
       Set-Cookie:
-      - PHPSESSID=407m01kf929eokjb54i255k1n2; path=/
+      - PHPSESSID=d9fcimogu6biie7l7qmt19gh44; path=/
       Expires:
       - Mon, 26 Jul 1997 05:00:00 GMT
       Cache-Control:
@@ -36,21 +36,20 @@ http_interactions:
       Pragma:
       - no-cache
       Last-Modified:
-      - Fri, 30 Oct 2015 14:00:05 GMT
+      - Wed, 13 May 2020 16:45:10 GMT
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '314'
+      - '73'
       Connection:
       - close
       Content-Type:
-      - text/xml
+      - text/xml;charset=UTF-8
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: |
         <?xml version="1.0"?>
-        <ad-getCouponsResponse><coupons><coupon id="34922" name="$10 OFF New Styles" url="10-off-selected-styles" begin="2015-09-17" expire="2015-10-31" accept_offline="1" accept_online="0" acceptMobile="1" acceptPrint="1"><offer>Selected Ladies and Men's Footwear
-        Regularly Priced above $75. </offer><restrictions>Coupon must be presented at time of purchase. Not valid with any other offer. </restrictions></coupon></coupons></ad-getCouponsResponse>
+        <ad-getJobsResponse><jobs></jobs></ad-getJobsResponse>
     http_version: 
-  recorded_at: Fri, 30 Oct 2015 14:02:40 GMT
+  recorded_at: Wed, 13 May 2020 16:45:10 GMT
 recorded_with: VCR 2.9.3

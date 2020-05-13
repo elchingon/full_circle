@@ -44,6 +44,8 @@ module FullCircle
         Builders::EventBuilder
       when "eventArea"
         Builders::EventAreaBuilder
+      when "job"
+        Builders::JobBuilder
       else
         raise "Unknown builder for key #{entity_key}"
       end

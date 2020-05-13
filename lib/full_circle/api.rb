@@ -20,6 +20,12 @@ module FullCircle
       response_xml = connection.call_api_method("ad.getCoupons", request_params)
       response_parser.parse(response_xml)
     end
+    
+    def fetch_jobs_for_ad(id,params={})
+      request_params = {page: 1, resultsPerPage: results_per_page, adId: id}.merge(params)
+      response_xml = connection.call_api_method("ad.getJobs", request_params)      
+      response_parser.parse(response_xml)
+    end
 
     def fetch_event_areas(params={})
       request_params = {page: 1, resultsPerPage: results_per_page}.merge(params)

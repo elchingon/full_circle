@@ -1,0 +1,158 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.360durango.com/1.0/ad.getJobs?adId=89588
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.360durango.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 13 May 2020 16:45:09 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.6.31
+      Set-Cookie:
+      - PHPSESSID=v3e3fg62ohusillof5l0n7gvv1; path=/
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      - post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Last-Modified:
+      - Wed, 13 May 2020 16:45:10 GMT
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '73'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml;charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxhZC1nZXRKb2JzUmVzcG9uc2U+PGpvYnM+Cjxqb2IgaWQ9IjE3NDY3IiBqb2JGaWVsZD0iQ3VzdG9tZXIgU2VydmljZSIgZWR1Y2F0aW9uUmVxdWlyZW1lbnQ9Ik4vQSIgaG91cnNUeXBlPSJQYXJ0LVRpbWUiIHRpdGxlPSJCYXJpc3RhIHwgRHVyYW5nbywgQ08iIGNvbXBhbnlOYW1lPSJEdXJhbmdvIEpvZXMgQ29mZmVlIiBjb21wYW55QWRkcjE9Ijc3OSBUZWNoIENlbnRlciBEcml2ZSIgY29tcGFueUNpdHk9IkR1cmFuZ28iIGNvbXBhbnlTdGF0ZT0iQ08iIGNvbXBhbnlaaXA9IjgxMzAxIiBkaXNwbGF5U3RhcnQ9IjIwMjAtMDQtMjgiIGRpc3BsYXlFbmQ9IjIwMjEtMDQtMDEiIGRlc2NyaXB0aW9uPSJBdCBEdXJhbmdvIEpvZXMsIHdlIGJlbGlldmUgdGhhdCBldmVyeW9uZSBkZXNlcnZlcyBhIHNtaWxlLCBhIHdhcm0gZ3JlZXRpbmcsIGFuZCBhIGdyZWF0IGN1cCBvZiBjb2ZmZWUuIEl0IGlzIG91ciBob25vciB0byBiZSBhIGJyaWdodCBzcG90IGluIHRoZSBsaXZlcyBvZiBvdXIgY3VzdG9tZXJzIGFuZCB3ZSB3b3JrIGhhcmQgdG8gY3JlYXRlIGxhc3RpbmcgY29ubmVjdGlvbnMgd2l0aCBvdXIgY29tbXVuaXRpZXMuIFdlIGJlbGlldmUgaW4gb3VyIGVtcGxveWVlcyBhbmQgaGlyZSBwZW9wbGUgd2hvIGhvbmVzdGx5IGNhcmUgZm9yIG90aGVycyBhbmQgdHJhaW4gdGhlbSB0byBnaXZlIHRoZSBnaWZ0IG9mIGxlZ2VuZGFyeSBjdXN0b21lciBzZXJ2aWNlIHdpdGggYW4gYW1hemluZyBjdXAgb2YgY29mZmVlISBNb3Jlb3Zlciwgd2UgZW5jb3VyYWdlIG91ciBiYXJpc3RhcyB0byBoYXZlIGZ1biEgQW5kIGhvcGUgdGhhdCBlYWNoIGVtcGxveWVlIHdpbGwgZ3JvdyBhcyBhbiBpbmRpdmlkdWFsIHdoaWxlIHdvcmtpbmcgZm9yIER1cmFuZ28gSm9lcy4gVG8gZWNobyB0aGUgd2lzZG9tIG9mIGEgZ3JlYXQgbGVhZGVyLCB3ZSBoYXZlIG1hZGUgaXQgb3VyIGFpbSB0byAiQmUgbW9yZSBjb25jZXJuZWQgYWJvdXQgbWFraW5nIG90aGVycyBmZWVsIGdvb2QgYWJvdXQgdGhlbXNlbHZlcyB0aGFuIG1ha2luZyB0aGVtIGZlZWwgZ29vZCBhYm91dCB1cy4iIC0gSm9obiBNYXh3ZWxsIFdlIE9OTFkgaGlyZSBCYXJpc3RhcyB3aXRoIGdyZWF0IGF0dGl0dWRlcyBhbmQgd2hvIGdlbnVpbmVseSBjYXJlIGFib3V0IHBlb3BsZSBhbmQgdGhlbiB3ZSB0cmFpbiB0aGUgYmFyaXN0YSBza2lsbHMuIER1cmFuZ28gSm9lcyBDb2ZmZWUgaXMgYSBncm93aW5nIGNvbXBhbnkgYW5kIHByb3ZpZGVzIGFuIGV4Y2l0aW5nIGFuZCBmdW4gYXRtb3NwaGVyZSB0byB3b3JrIGluLiBXZSBhcmUgY29tbWl0dGVkIHRvIHRoZSBwZXJzb25hbCBncm93dGggYW5kIGRldmVsb3BtZW50IG9mIG91ciBlbXBsb3llZXMgYXMgd2VsbCBhcyB0aGUgY29tbXVuaXRpZXMgaW4gd2hpY2ggd2UgYXJlIGEgcGFydC4g4oCiIEZsZXhpYmxlIHNjaGVkdWxlcyBhbGxvdyB5b3UgdG8gd29yayBzaGlmdHMgdGhhdCBmaXQgeW91ciBsaWZlc3R5bGUuIOKAoiBDb21wZXRpdGl2ZSBjb21wZW5zYXRpb24uIOKAoiBEcmluaywgRm9vZCwgYW5kIE1lcmNoYW5kaXNlIGRpc2NvdW50cy4g4oCiIFBsZW50eSBvZiByb29tIGZvciBhZHZhbmNlbWVudC4gV2UgYXJlIGFsd2F5cyBsb29raW5nIGZvciBzdGFmZiB3aG8gd2FudCB0byBtYWtlIGEgZGlmZmVyZW5jZSBhbmQgZ3JvdyB3aXRoIHVzLiBDb21lIGpvaW4gdGhlIER1cmFuZ28gSm9lcyB0ZWFtIGFuZCBmaW5kIG91dCB3aGF0IGl0IG1lYW5zIHRvIG1ha2UgYSBkaWZmZXJlbmNlIHdoaWxlIHNlcnZpbmcgZGVsaWNpb3VzIGNvZmZlZS4iIHVybD0iaHR0cHM6Ly8zNjBEdXJhbmdvLmNvbS9qb2JzL0N1c3RvbWVyU2VydmljZS9kdXJhbmdvLWpvZXMtY29mZmVlL0JhcmlzdGFEdXJhbmdvQ08uaHRtbCIvPgo8L2pvYnM+PC9hZC1nZXRKb2JzUmVzcG9uc2U+Cg==
+    http_version: 
+  recorded_at: Wed, 13 May 2020 16:45:10 GMT
+- request:
+    method: get
+    uri: https://api.360durango.com/1.0/ad.getJobs?adId=81231
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.360durango.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 13 May 2020 17:17:14 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.6.31
+      Set-Cookie:
+      - PHPSESSID=barj670kvur0921eqbi9ufoac0; path=/
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      - post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Last-Modified:
+      - Wed, 13 May 2020 17:17:14 GMT
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1056'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml;charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <?xml version="1.0"?>
+        <ad-getJobsResponse><jobs><job id="17467" jobField="Customer Service" educationRequirement="N/A" hoursType="Part-Time" title="Barista | Durango, CO" companyName="Durango Joes Coffee" companyAddr1="779 Tech Center Drive" companyCity="Durango" companyState="CO" companyZip="81301" displayStart="2020-04-28" displayEnd="2021-04-01" description="At Durango Joes, we believe that everyone deserves a smile, a warm greeting, and a great cup of coffee. It is our honor to be a bright spot in the lives of our customers and we work hard to create lasting connections with our communities.&#10;&#10;We believe in our employees and hire people who honestly care for others and train them to give the gift of legendary customer service with an amazing cup of coffee! Moreover, we encourage our baristas to have fun! And hope that each employee will grow as an individual while working for Durango Joes.&#10;&#10;To echo the wisdom of a great leader, we have made it our aim to &quot;Be more concerned about making others feel good about themselves than making them feel good about us.&quot; - John Maxwell&#10;&#10;We ONLY hire Baristas with great attitudes and who genuinely care about people and then we train the barista skills. Durango Joes Coffee is a growing company and provides an exciting and fun atmosphere to work in. We are committed to the personal growth and development of our employees as well as the communities in which we are a part.&#10;&#10;&#x2022; Flexible schedules allow you to work shifts that fit your lifestyle.&#10;&#x2022; Competitive compensation.&#10;&#x2022; Drink, Food, and Merchandise discounts.&#10;&#x2022; Plenty of room for advancement. We are always looking for staff who want to make a difference and grow with us.&#10;&#10;Come join the Durango Joes team and find out what it means to make a difference while serving delicious coffee." url="https://360Durango.com/jobs/CustomerService/durango-joes-coffee/BaristaDurangoCO.html"></job></jobs></ad-getJobsResponse>
+    http_version: 
+  recorded_at: Wed, 13 May 2020 17:17:14 GMT
+- request:
+    method: get
+    uri: https://api.360durango.com/1.0/ad.getJobs?adId=81231&page=1&resultsPerPage=20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.360durango.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 13 May 2020 17:31:14 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.6.31
+      Set-Cookie:
+      - PHPSESSID=d24v5qbo64ai06kivvmenvntf5; path=/
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      - post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Last-Modified:
+      - Wed, 13 May 2020 17:31:14 GMT
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1056'
+      Connection:
+      - close
+      Content-Type:
+      - text/xml;charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <?xml version="1.0"?>
+        <ad-getJobsResponse><jobs><job id="17467" jobField="Customer Service" educationRequirement="N/A" hoursType="Part-Time" title="Barista | Durango, CO" companyName="Durango Joes Coffee" companyAddr1="779 Tech Center Drive" companyCity="Durango" companyState="CO" companyZip="81301" displayStart="2020-04-28" displayEnd="2021-04-01" description="At Durango Joes, we believe that everyone deserves a smile, a warm greeting, and a great cup of coffee. It is our honor to be a bright spot in the lives of our customers and we work hard to create lasting connections with our communities.&#10;&#10;We believe in our employees and hire people who honestly care for others and train them to give the gift of legendary customer service with an amazing cup of coffee! Moreover, we encourage our baristas to have fun! And hope that each employee will grow as an individual while working for Durango Joes.&#10;&#10;To echo the wisdom of a great leader, we have made it our aim to &quot;Be more concerned about making others feel good about themselves than making them feel good about us.&quot; - John Maxwell&#10;&#10;We ONLY hire Baristas with great attitudes and who genuinely care about people and then we train the barista skills. Durango Joes Coffee is a growing company and provides an exciting and fun atmosphere to work in. We are committed to the personal growth and development of our employees as well as the communities in which we are a part.&#10;&#10;&#x2022; Flexible schedules allow you to work shifts that fit your lifestyle.&#10;&#x2022; Competitive compensation.&#10;&#x2022; Drink, Food, and Merchandise discounts.&#10;&#x2022; Plenty of room for advancement. We are always looking for staff who want to make a difference and grow with us.&#10;&#10;Come join the Durango Joes team and find out what it means to make a difference while serving delicious coffee." url="https://360Durango.com/jobs/CustomerService/durango-joes-coffee/BaristaDurangoCO.html"></job></jobs></ad-getJobsResponse>
+    http_version: 
+  recorded_at: Wed, 13 May 2020 17:31:14 GMT
+recorded_with: VCR 2.9.3
