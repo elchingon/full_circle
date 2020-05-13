@@ -11,7 +11,7 @@ module FullCircle
         company_city: hash['companyCity'],
         company_state: hash['companyState'],
         accept_print: hash['acceptPrint'],
-        company_zip: hash.fetch('companyZip'),
+        company_zip: hash['companyZip'],
         salary: hash['salary'],
         hours_type: hash['hoursType'],
         display_start: hash['displayStart'],
